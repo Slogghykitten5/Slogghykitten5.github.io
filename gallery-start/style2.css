@@ -128,4 +128,8 @@ button {
         min-width: 0px;
         display: none;
     }
+
+    .thumb-bar img{
+        display: none;
+    }
 }
