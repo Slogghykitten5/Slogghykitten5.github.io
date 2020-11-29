@@ -126,5 +126,6 @@ button {
     .thumb-bar {
         max-width: 0px;
         max-height: 0px;
+        border: none;
     }
 }
