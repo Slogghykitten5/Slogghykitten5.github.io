@@ -124,6 +124,8 @@ button {
     }
 
     .thumb-bar img{
+        max-height: 0px;
+        min-width: 0px;
         display: none;
     }
 }
