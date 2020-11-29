@@ -104,10 +104,11 @@ but_left.onclick = function(){
 }
 
 img_bg.onmouseover = function(){
-    but_left.style.backgroundColor = 'rgba(0, 0, 0, 0.3)'
+    but_left.style.background = "url('Icons/arrow-left-01-256.webp') no-repeat left top, linear-gradient(#eb01a5, #d13531);"
     but_left.style.backgroundImage = "url('Icons/arrow-left-01-256.webp')"
-    but_right.style.backgroundColor = 'rgba(0, 0, 0, 0.3)'
+    but_right.style.backgroundColor = 'linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);'
     but_right.style.backgroundImage = "url('Icons/arrow-right-01-256.webp')"
+    myFunction()
 }
 
 img_bg.onmouseout = function(){
@@ -116,3 +117,7 @@ img_bg.onmouseout = function(){
     but_right.style.backgroundColor = 'rgba(0, 0, 0, 0)'
     but_right.style.backgroundImage = ""
 }
+
+function myFunction() {
+    document.body.style.background = "#f3f3f3 url('img_tree.png') no-repeat right top";
+  }

@@ -61,14 +61,15 @@ button {
 .left{
     position: absolute;
     left: 0px;
-    top: 0px;
-    background-color: rgba(0, 0, 0, 0);
+    top: 0px;/*
+    background-color: rgba(0, 0, 0, 0);*/
     height: 480px;
     width: 100px;
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100px 120px;
+    background-size: 100px 120px;/*
+    background-color:linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);*/
 }
   
 .right{
