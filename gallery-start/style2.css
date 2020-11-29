@@ -1,0 +1,125 @@
+body{
+    padding: 0 0 1em;
+}
+
+h1 {
+    font-family: helvetica, arial, sans-serif;
+    text-align: center;
+}
+  
+.full_img_bg{
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: rgb(214, 250, 255);
+    align-items: center;
+}
+
+.full_img_bg::selection,.full-img::selection{
+    background: rgba(0, 0, 0, 0);
+}
+
+.full-img {
+    position: relative;
+    top: 0;
+    left: 28%;
+    width: 640px;
+    height: 480px;
+}
+
+.displayed-img{
+    max-width: 640px;
+    min-width: 640px;
+    max-height: 480px;
+    min-height: 480px;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+    background-color: rgba(0,0,0,0);
+}
+  
+button {
+    border: 0;
+    background: rgba(150,150,150,0.6);
+    text-shadow: 1px 1px 1px white;
+    border: 1px solid #999;
+    position: absolute;
+    cursor: pointer;
+    top: 2px;
+    left: 2px;
+}
+
+.left{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    height: 480px;
+    width: 100px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 120px;
+}
+  
+.right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0);
+    height: 480px;
+    width: 100px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 120px;
+}
+
+.thumb-bar img {
+    box-sizing: border-box;
+    display: block;
+    min-height: 100px;
+    max-height: 100px;
+    float: left;
+    cursor: pointer;
+}
+
+.thumb-bar img::selection {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width:700px){
+    .full-img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 240px;
+    }
+    
+    .displayed-img,.overlay{
+        min-width: 100%;
+        max-height: 240px;
+        min-height: 240px;
+    }
+      
+    
+
+    .left,.right{
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        height: 240px;
+        width:50px;
+    }
+
+    button{
+        position: relative;
+        top: 0px;
+        left: 0;
+    }
+}
