@@ -1,0 +1,5 @@
+Import Dancing script 
+@import url('../Fonts-css-and-codes/Dancing-script/Dancing-script-stylesheet.css');
+
+Import Raleway Thin 
+@import url('../Fonts-css-and-codes/Raleway-thin/Raleway-thin-stylesheet.css');

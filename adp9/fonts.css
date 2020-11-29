@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'ds';
+  src: url('dancingscript-bold-webfont.woff2') format('woff2'),url('Dancing-script/dancingscript-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rt';
+  src: url('RalewayThin/ralewaythin-light-webfont.woff2') format('woff2'),url('RalewayThin/ralewaythin-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
