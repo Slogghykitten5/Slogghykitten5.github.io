@@ -123,7 +123,7 @@ button {
         left: 0;
     }
 
-    .thumb-bar img{
+    .thumb-bar {
         max-height: 0px;
         min-width: 0px;
         display: none;
