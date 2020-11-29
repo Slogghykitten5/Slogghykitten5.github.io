@@ -108,7 +108,13 @@ button {
         min-height: 240px;
     }
       
-    
+    .left{
+        background-image: url(Icons/arrow-left-01-256.webp);
+    }
+
+    .right {
+        background-image: url(Icons/arrow-right-01-256.webp);
+    }
 
     .left,.right{
         background-color: rgba(0, 0, 0, 0.5);
