@@ -104,9 +104,9 @@ but_left.onclick = function(){
 }
 
 img_bg.onmouseover = function(){
-    but_left.style.backgroundColor = 'background: linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);'
+    but_left.style.backgroundColor = 'linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);'
     but_left.style.backgroundImage = "url('Icons/arrow-left-01-256.webp')"
-    but_right.style.backgroundColor = 'background: linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);'
+    but_right.style.backgroundColor = 'linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);'
     but_right.style.backgroundImage = "url('Icons/arrow-right-01-256.webp')"
 }
 
