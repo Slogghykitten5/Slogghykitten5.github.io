@@ -53,13 +53,10 @@ btn.onclick = function(){
         overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
         body.style.backgroundColor = 'rgba(0,0,0,0.6)'
         img_bg.style.background = "linear-gradient(180deg, rgba(135,9,9,1) 0%, rgba(88,87,107,1) 50%, rgba(18,98,113,1) 100%)"
-        but_left.style.backgroundImage = "Icons/iconfinder-icon.svg"
-        but_right.style.backgroundImage = "Icons/iconfinder(1)-icon.svg"
     }
     else{
         btn.textContent = "Darken";
         overlay.style.backgroundColor = ' rgba(0,0,0,0)';
-        img_bg.style.backgroundColor = 'rgb(214, 250, 255)';
         body.style.backgroundColor = ''
         img_bg.style.background = ""
     }
