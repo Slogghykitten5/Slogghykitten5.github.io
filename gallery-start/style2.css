@@ -17,6 +17,7 @@ h1 {
     width: 100%;
     background-color: rgb(214, 250, 255);
     align-items: center;
+    user-select: none;
 }
 
 .full_img_bg::selection,.full-img::selection{
