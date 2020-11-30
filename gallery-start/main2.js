@@ -103,9 +103,10 @@ but_left.onclick = function(){
     check()
 }
 
-    img_bg.onmouseover = function(){
+    img_bg.onmouseover = function(){/*
         but_left.style.zIndex = '1'
-        but_right.style.zIndex = '1'
+        but_right.style.zIndex = '1'*/
+        but_left.style.backgrounImage = 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/arrow-right-01-256.webp")center / 100px 120px no-repeat;'
     }
 
     img_bg.onmouseout = function(){
