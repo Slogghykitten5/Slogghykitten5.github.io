@@ -121,6 +121,10 @@ h1 {
         float:none;
     }
 
+    .full_img_bg{
+        padding:0px;
+    }
+
     .full-img {   
         position: relative;
         top:0px; 
@@ -164,7 +168,7 @@ h1 {
         left: 0;
     }
 
-    .thumb-bar img{
+    .thumb-bar{
         display: none;
     }
 }
