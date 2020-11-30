@@ -95,11 +95,11 @@ h1 {
 }
 
 .full_img_bg:hover .left {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/arrow-left-01-256.webp") center / 100px 120px no-repeat;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 100px 120px no-repeat;
     }
 
 .full_img_bg:hover .right {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/arrow-right-01-256.webp") center / 100px 120px no-repeat;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon") center / 100px 120px no-repeat;
 }
 
 .thumb-bar{
