@@ -103,20 +103,13 @@ but_left.onclick = function(){
     check()
 }
 
-img_bg.onmouseover = function(){/*
-    but_left.style.background ="linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);"
-    but_left.style.backgroundImage = "url('Icons/arrow-left-01-256.webp')"
-    but_right.style.backgroundColor = 'linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);'
-    but_right.style.backgroundImage = "url('Icons/arrow-right-01-256.webp')"*/
-    but_left.style.zindex = "1"
-    but_right.style.zindex = "1"
+img_bg.onmouseover = function(){
+    but_left.style.zIndex = '1'
+    but_right.style.zIndex = '1'
 }
 
 img_bg.onmouseout = function(){
-    but_left.style.backgroundColor = 'rgba(0, 0, 0, 0)'
-    but_left.style.backgroundImage = ""
-    but_right.style.backgroundColor = 'rgba(0, 0, 0, 0)'
-    but_right.style.backgroundImage = ""
+    but_left.style.zIndex = '-1'
+    but_right.style.zIndex = '-1'
 }
-
 

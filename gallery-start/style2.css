@@ -66,10 +66,8 @@ button {
     height: 480px;
     width: 100px;
     cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100px 120px;/*
-    background-color:linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);*/
+    background:linear-gradient(270deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%),url("Icons/arrow-left-01-256.webp")center / 100px 120px no-repeat;
+    z-index: -1;
 }
   
 .right{
@@ -79,9 +77,7 @@ button {
     background-color: rgba(0, 0, 0, 0);
     height: 480px;
     width: 100px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
+    background:linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%),url("Icons/arrow-right-01-256.webp")center / 100px 120px no-repeat;
     background-size: 100px 120px;
 }
 
