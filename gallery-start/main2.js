@@ -5,6 +5,7 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 const img_bg = document.querySelector('.full_img_bg');
+const body = document.querySelector('body')
 
 /* Looping through images */
 
@@ -19,6 +20,8 @@ for(let i = 0;i<imgSrc.length;i++){
     hi = newImage.style.width = `${((100/imgSrc.length).toFixed(4))}%`;
     thumbBar.appendChild(newImage);
 }
+
+body.style.width=window.width;
 
 function check(){
     src = displayedImage.getAttribute('src');
