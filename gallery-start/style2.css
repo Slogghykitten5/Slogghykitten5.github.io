@@ -61,8 +61,7 @@ button {
 .left{
     position: absolute;
     left: 0px;
-    top: 0px;/*
-    background-color: rgba(0, 0, 0, 0);*/
+    top: 0px;
     height: 480px;
     width: 100px;
     cursor: pointer;
@@ -74,11 +73,11 @@ button {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0);
     height: 480px;
     width: 100px;
+    cursor: pointer;
     background:linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%),url("Icons/arrow-right-01-256.webp")center / 100px 120px no-repeat;
-    background-size: 100px 120px;
+    
 }
 
 .thumb-bar img {
@@ -105,20 +104,17 @@ button {
     }
       
     .left{
-        background: linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);
-        background-image: url(Icons/arrow-left-01-256.webp);
+        background:linear-gradient(270deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%),url("Icons/arrow-left-01-256.webp")center / 50px 60px no-repeat;
     }
 
     .right {
-        background: linear-gradient(90deg, rgba(0,0,0,0.6251634442839635) 0%, rgba(0,0,0,0.9192810913427871) 100%);
-        background-image: url(Icons/arrow-right-01-256.webp);
+        background: linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%),url("Icons/arrow-right-01-256.webp")center / 50px 60px no-repeat;
     }
 
     .left,.right{
-        background-color: rgba(0, 0, 0, 0.3);
         z-index: 1;
         height: 240px;
-        width:50px;
+        width:10%;
     }
 
     button{
