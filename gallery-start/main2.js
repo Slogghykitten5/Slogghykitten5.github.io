@@ -102,14 +102,14 @@ but_left.onclick = function(){
     }
     check()
 }
+if(window.width>700){
+    img_bg.onmouseover = function(){
+        but_left.style.zIndex = '1'
+        but_right.style.zIndex = '1'
+    }
 
-img_bg.onmouseover = function(){
-    but_left.style.zIndex = '1'
-    but_right.style.zIndex = '1'
+    img_bg.onmouseout = function(){
+        but_left.style.zIndex = '-1'
+        but_right.style.zIndex = '-1'
+    }
 }
-
-img_bg.onmouseout = function(){
-    but_left.style.zIndex = '-1'
-    but_right.style.zIndex = '-1'
-}
-
