@@ -157,6 +157,9 @@ h1 {
         z-index: 1;
     }
 
+    .left:hover,.right:hover{
+        background-size:50px 60px;
+
     button{
         position: relative;
         top: 0px;
