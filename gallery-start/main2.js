@@ -1,7 +1,7 @@
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
-const btn = document.querySelector('button');
+const btn = document.querySelector('.darken');
 const overlay = document.querySelector('.overlay');
 
 const img_bg = document.querySelector('.full_img_bg');
@@ -29,9 +29,11 @@ function check(){
         need_img = thumbBar.querySelector('.img_'+i);
         if(src === imgSrc[i]){
             need_img.style.border = '10px double black';
+            need_img.style.borderRadius = "20px";
         }
         else{
             need_img.style.border = '';
+            need_img.style.borderRadius = "0px";
         }
     }
 }
@@ -49,12 +51,17 @@ btn.onclick = function(){
     if(btn.textContent==="Darken"){
         btn.textContent = "Lighten";
         overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
-        img_bg.style.backgroundColor = 'rgb(132,179,185)';
+        body.style.backgroundColor = 'rgba(0,0,0,0.6)'
+        img_bg.style.background = "linear-gradient(180deg, rgba(135,9,9,1) 0%, rgba(88,87,107,1) 50%, rgba(18,98,113,1) 100%)"
+        but_left.style.backgroundImage = "Icons/iconfinder-icon.svg"
+        but_right.style.backgroundImage = "Icons/iconfinder(1)-icon.svg"
     }
     else{
         btn.textContent = "Darken";
         overlay.style.backgroundColor = ' rgba(0,0,0,0)';
         img_bg.style.backgroundColor = 'rgb(214, 250, 255)';
+        body.style.backgroundColor = ''
+        img_bg.style.background = ""
     }
 }
 
@@ -106,13 +113,4 @@ but_left.onclick = function(){
     check()
 }
 
-    img_bg.onmouseover = function(){
-        but_left.style.backgrounImage = 'linear-gradient(270 deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/arrow-right-01-256.webp")center / 100px 120px no-repeat;'
-        but_right.style.backgrounImage = 'linear-gradient(90 deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/arrow-right-01-256.webp")center / 100px 120px no-repeat;'
-    }
-
-    img_bg.onmouseout = function(){
-        but_left.style.backgroundImage = "";
-        but_right.style.backgrounImage = ""
-    }
 
