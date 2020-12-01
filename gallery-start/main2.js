@@ -7,6 +7,9 @@ const overlay = document.querySelector('.overlay');
 const img_bg = document.querySelector('.full_img_bg');
 const body = document.querySelector('body')
 
+const zoom_bg = document.querySelector('.zoom_bg')
+const zoom_img = document.querySelector('.zoom_img')
+
 /* Looping through images */
 
 let imgSrc = ["images/balloon-sq1.jpg","images/balloon-sq2.jpg","images/balloon-sq3.jpg","images/balloon-sq4.jpg","images/balloon-sq5.jpg","images/balloon-sq6.jpg","images/leopardskin.jpg","images/pic1.jpg","images/pic2.jpg","images/pic3.jpg","images/pic4.jpg","images/pic5.jpg"];
@@ -29,11 +32,9 @@ function check(){
         need_img = thumbBar.querySelector('.img_'+i);
         if(src === imgSrc[i]){
             need_img.style.border = '10px double black';
-            need_img.style.borderRadius = "20px";
         }
         else{
             need_img.style.border = '';
-            need_img.style.borderRadius = "0px";
         }
     }
 }
@@ -54,6 +55,7 @@ btn.onclick = function(){
         body.style.backgroundColor = 'rgba(0,0,0,0.6)'
         img_bg.style.backgroundColor = 'rgb(117, 137, 139)'
         img_bg.style.background = "linear-gradient(180deg, rgba(135,9,9,1) 0%, rgba(88,87,107,1) 50%, rgba(18,98,113,1) 100%)"
+        thumbBar.style.zIndex = "2"
     }
     else{
         btn.textContent = "Darken";
@@ -109,6 +111,13 @@ but_left.onclick = function(){
         }
     }
     check()
+}
+
+if(window.innerWidth>700){
+    overlay.onclick = function(){
+        zoom_img.setAttribute('src',)
+    }
+
 }
 
 

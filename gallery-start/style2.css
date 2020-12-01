@@ -43,6 +43,10 @@ h1 {
     max-height: 480px;
     min-height: 480px;
 }
+
+.overlay{
+    cursor: zoom-in;
+}
   
 .overlay {
     border: 2px solid black;
@@ -105,11 +109,14 @@ h1 {
 }
 
 .thumb-bar{
+    position: absolute;
     background-color: rgb(224,19,19);
     background: linear-gradient(315deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
     min-height: min-content;
+    z-index: 10;
 }
 .thumb-bar img{
+    position: relative;
     min-height: 100px;
     max-height: 100px;
     float: left;
