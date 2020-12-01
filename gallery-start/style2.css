@@ -55,8 +55,15 @@ h1 {
     background-color: rgba(0,0,0,0);
 }
 
+.darken_cover{
+    position: sticky;
+    top: 20px;
+    z-index: 1;
+    float: left;
+}
+
 .darken{
-    cursor: pointer;
+    position: absolute;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
@@ -64,7 +71,7 @@ h1 {
     color: white;
     border: 0.5px solid black;
     border-radius: 20px;
-    float: left;
+    cursor: pointer;
 }
 
 #hi{
@@ -111,31 +118,20 @@ h1 {
 
 @media screen and (max-width:700px){
 
-    .darken_cover{
-        position: sticky;
-        top: 10px;
-        float:left;
-        z-index: 1;
-    }
-
-    .darken{
-        position: absolute;
-    }
-
     .full_img_bg:hover .left {
-        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 50px 60px no-repeat;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 60px 70px no-repeat;
+        z-index: 2;
         }
     
     .full_img_bg:hover .right {
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 50px 60px no-repeat;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 60px 70px no-repeat;
     }
 
     .full_img_bg{
         border: 2px soild black;
     }
 
-    .full-img {   
-        top: 0px;
+    .full-img {
         left:0px;
         width: 100%;
         height: 240px;
@@ -148,7 +144,7 @@ h1 {
         border:none;
         border-radius: 0px;
     }
-      
+     
     .left{
         background:linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/iconfinder-icon(1).svg")center / 50px 60px no-repeat; 
         z-index: 1;
