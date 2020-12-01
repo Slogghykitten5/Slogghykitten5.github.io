@@ -35,14 +35,14 @@ h1 {
     height: 0px;
     width: 0px;
 }
-/*
+
 .zoom_img_full{
     position: relative;
     top:10%;
-    left:10%;
-    min-width: 70%;
-    min-height: 70%;
-}*/
+    left:30%;
+    right:30%;
+    bottom:10%;
+}
 
 .full_img_bg{
     position: relative;
