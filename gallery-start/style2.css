@@ -20,9 +20,8 @@ h1 {
     position: relative;
     width: 100%;
     height: min-content;
-    background-color: rgb(214, 250, 255);
     user-select: none;
-    background-color: rgb(224,19,19);
+    background-color: rgb(214, 250, 255); 
     background: linear-gradient(180deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
 }
 
@@ -32,12 +31,12 @@ h1 {
     left: 28%;
     width: 640px;
     height: 480px;
-    border: 2px solid black;
-    border-radius: 50px;
 }
 
 .displayed-img{
-    border: 1px solid black;
+    position: relative;
+    top: 0;
+    border: 2px solid black;
     border-radius: 50px;
     max-width: 100%;
     min-width: 100%;
@@ -46,8 +45,11 @@ h1 {
 }
   
 .overlay {
+    border: 2px solid black;
+    border-radius: 50px;
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 480px;
     background-color: rgba(0,0,0,0);
@@ -60,9 +62,6 @@ h1 {
     padding: 20px;
     width: 100px;
     color: white;
-    position: sticky;
-    top: 20px;
-    z-index: 2;
     border: 0.5px solid black;
     border-radius: 20px;
     float: left;
@@ -76,7 +75,7 @@ h1 {
     position: absolute;
     left: 0px;
     top: 0px;
-    height: 480px;
+    height: 100%;
     width: 100px;
     cursor: pointer;
 }
@@ -104,7 +103,6 @@ h1 {
     min-height: min-content;
 }
 .thumb-bar img{
-    box-sizing: border-box;
     min-height: 100px;
     max-height: 100px;
     float: left;
@@ -113,33 +111,51 @@ h1 {
 
 @media screen and (max-width:700px){
 
+    .darken_cover{
+        position: sticky;
+        top: 10px;
+        float:left;
+        z-index: 1;
+    }
+
     .darken{
-        float:none;
+        position: absolute;
+    }
+
+    .full_img_bg:hover .left {
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 50px 60px no-repeat;
+        }
+    
+    .full_img_bg:hover .right {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 50px 60px no-repeat;
     }
 
     .full_img_bg{
-        padding:0px;
+        border: 2px soild black;
     }
 
     .full-img {   
+        top: 0px;
         left:0px;
         width: 100%;
         height: 240px;
-        border:none;
     }
     
     .displayed-img,.overlay{
         max-width: 100%;
         max-height: 240px;
         min-height: 240px;
+        border:none;
+        border-radius: 0px;
     }
       
     .left{
-        background:linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/arrow-left-01-256.webp")center / 50px 60px no-repeat;
+        background:linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/iconfinder-icon(1).svg")center / 50px 60px no-repeat; 
+        z-index: 1;
     }
 
     .right {
-        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/arrow-right-01-256.webp")center / 50px 60px no-repeat;
+        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/iconfinder-icon.svg")center / 50px 60px no-repeat;
     }
 
     .left,.right{
@@ -147,17 +163,9 @@ h1 {
         width:10%;
     }
 
-    .left:hover,.right:hover{
-        background-size:50px 60px;
-    }
-
     .thumb-bar{
         display:none;
     }
 
-    .thumb-bar img{
-        display: none; 
-        max-height:0px;
-        max-width:0px;
-    }
+    
 }

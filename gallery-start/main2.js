@@ -50,13 +50,14 @@ thumbBar.onclick = function(e){
 btn.onclick = function(){
     if(btn.textContent==="Darken"){
         btn.textContent = "Lighten";
-        overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+        overlay.style.backgroundColor = 'rgba(0,0,0,1)';
         body.style.backgroundColor = 'rgba(0,0,0,0.6)'
+        img_bg.style.backgroundColor = 'rgb(117, 137, 139)'
         img_bg.style.background = "linear-gradient(180deg, rgba(135,9,9,1) 0%, rgba(88,87,107,1) 50%, rgba(18,98,113,1) 100%)"
     }
     else{
         btn.textContent = "Darken";
-        overlay.style.backgroundColor = ' rgba(0,0,0,0)';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0)';
         body.style.backgroundColor = ''
         img_bg.style.background = ""
     }
