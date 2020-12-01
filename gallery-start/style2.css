@@ -168,7 +168,9 @@ h1 {
         left: 0;
     }
 
-    .thumb-bar{
-        display: none; !important
+    .thumb-bar img{
+        display: none; 
+        max-height:0px;
+        max-width:0px;
     }
 }
