@@ -17,8 +17,6 @@ h1 {
 }
   
 .full_img_bg{
-    padding-top: 1px;
-    padding-bottom: 1px;
     position: relative;
     width: 100%;
     height: min-content;
@@ -39,6 +37,8 @@ h1 {
 }
 
 .displayed-img{
+    border: 1px solid black;
+    border-radius: 50px;
     max-width: 100%;
     min-width: 100%;
     max-height: 480px;
@@ -95,7 +95,7 @@ h1 {
     }
 
 .full_img_bg:hover .right {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon") center / 100px 120px no-repeat;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 100px 120px no-repeat;
 }
 
 .thumb-bar{
