@@ -4,18 +4,46 @@
 
 html {
   font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+  min-height: 100%;
 }
 
 body {
   padding: 0 0 1em;
   font-family: 'rt' , 'sans-serif';
+  min-height: 100%;
 }
 
 h1 {
     font-family: helvetica, arial, sans-serif;
     text-align: center;
 }
-  
+
+.zoom_bg_full{
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    user-select: none;
+    margin-bottom: 0;
+}
+
+.zoom_bg{
+    margin: 0%;
+    height: 0px;
+    width: 0px;
+}
+/*
+.zoom_img_full{
+    position: relative;
+    top:10%;
+    left:10%;
+    min-width: 70%;
+    min-height: 70%;
+}*/
+
 .full_img_bg{
     position: relative;
     width: 100%;
@@ -80,6 +108,9 @@ h1 {
 
 #hi{
     margin-top: 1000px;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(224,19,19,1);
 }
 
 .left{
@@ -113,7 +144,6 @@ h1 {
     background-color: rgb(224,19,19);
     background: linear-gradient(315deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
     min-height: min-content;
-    z-index: 10;
 }
 .thumb-bar img{
     position: relative;

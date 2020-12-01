@@ -1,3 +1,5 @@
+const doc_body = document.querySelector('body')
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
@@ -55,7 +57,6 @@ btn.onclick = function(){
         body.style.backgroundColor = 'rgba(0,0,0,0.6)'
         img_bg.style.backgroundColor = 'rgb(117, 137, 139)'
         img_bg.style.background = "linear-gradient(180deg, rgba(135,9,9,1) 0%, rgba(88,87,107,1) 50%, rgba(18,98,113,1) 100%)"
-        thumbBar.style.zIndex = "2"
     }
     else{
         btn.textContent = "Darken";
@@ -114,8 +115,18 @@ but_left.onclick = function(){
 }
 
 if(window.innerWidth>700){
+    src = displayedImage.getAttribute('src')
     overlay.onclick = function(){
-        zoom_img.setAttribute('src',)
+        let html = document.querySelector('html')
+        zoom_img.style.display = '';
+        zoom_img.setAttribute('src',src)
+        zoom_img.className = 'zoom_img_full'
+        zoom_bg.className ='zoom_bg_full';
+        but_left.style.zIndex = '4';
+        but_right.style.zIndex = '4';
+        but_right.style.height='100%'
+        window.onscroll = function () { window.scrollTo(0, 0); };
+        doc_body.style.overflow = 'hidden'
     }
 
 }
