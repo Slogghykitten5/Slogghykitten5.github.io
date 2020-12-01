@@ -9,8 +9,10 @@ html {
 
 body {
   padding: 0 0 1em;
-  font-family: 'rt' , 'sans-serif';
-  min-height: 100%;
+}
+
+.doc_body{
+    overflow: hidden;
 }
 
 h1 {
@@ -36,13 +38,47 @@ h1 {
     width: 0px;
 }
 
-.zoom_img_full{
-    position: relative;
+.img_warp{
+    position: absolute;
     top:10%;
     left:30%;
-    right:30%;
-    bottom:10%;
 }
+
+.zoom_img{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.big_right,.big_left,.close{
+    display: none;
+}
+
+.big_left_dis,.big_right_dis,.close_dis{
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.big_left_dis{
+    top: 45%;
+    display: block;
+}
+
+.big_right_dis{
+    top: 45%;
+    right: 0;
+    display: block;
+}
+
+.close_dis{
+    height: 80px;
+    width: 80px;
+    top: 10px;
+    right: 20px;
+    display: block;
+}
+
 
 .full_img_bg{
     position: relative;

@@ -11,6 +11,7 @@ const body = document.querySelector('body')
 
 const zoom_bg = document.querySelector('.zoom_bg')
 const zoom_img = document.querySelector('.zoom_img')
+const zoom_img_wrap = document.querySelector('.img_wrap')
 
 /* Looping through images */
 
@@ -115,15 +116,20 @@ but_left.onclick = function(){
 }
 
 if(window.innerWidth>700){
+    big_left = document.querySelector('.big_left')
+    big_right = document.querySelector('.big_right')
+    exit = document.querySelector('.close')
     src = displayedImage.getAttribute('src')
     overlay.onclick = function(){
         let html = document.querySelector('html')
-        zoom_img.style.display = '';
         zoom_img.setAttribute('src',src)
         zoom_img.className = 'zoom_img_full'
-        zoom_bg.className ='zoom_bg_full';
-        window.onscroll = function () { window.scrollTo(0, 0); };
-        doc_body.style.overflow = 'hidden'
+        zoom_bg.className ='zoom_bg_full';/*
+        window.onscroll = function () { window.scrollTo(0, 0); };*/
+        doc_body.className = 'doc_body'
+        big_left.className = 'big_left_dis'
+        big_right.className = 'big_right_dis'
+        exit.className = 'close_dis'
     }
 
 }
