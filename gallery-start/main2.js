@@ -122,9 +122,6 @@ if(window.innerWidth>700){
         zoom_img.setAttribute('src',src)
         zoom_img.className = 'zoom_img_full'
         zoom_bg.className ='zoom_bg_full';
-        but_left.style.zIndex = '4';
-        but_right.style.zIndex = '4';
-        but_right.style.height='100%'
         window.onscroll = function () { window.scrollTo(0, 0); };
         doc_body.style.overflow = 'hidden'
     }
