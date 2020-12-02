@@ -59,10 +59,11 @@ btn.onclick = function(){
     if(btn.textContent==="Darken"){
         btn.textContent = "Lighten";
         overlay.className = 'dark_cover_dis'
+        overlay.style.animation = 'fade-in .5s both'
     }
     else{
         btn.textContent = "Darken";
-        overlay.className = 'dark_cover'
+        overlay.style.animation = 'fade-out 0.5s ease-out both'
     }
 }
 
@@ -133,9 +134,9 @@ function small_check(){
 }
 
 function leave(){
+    zoom_bg.style.animation = 'fade-out 0.5s  both'
     zoom_img_wrap.className = 'img_wrap'
     zoom_img.className = 'zoom_img'
-    zoom_bg.className = 'zoom_bg'
     doc_body.className = ''
     big_left.className = 'big_left'
     big_right.className = 'big_right'
@@ -145,6 +146,7 @@ function leave(){
 
 if(window.innerWidth>700){
     displayedImage.onclick = function(){
+        zoom_bg.style.animation = 'fade-in 0.5s  both'
         zoom_img_wrap.className = 'img_wrap_dis'
         zoom_img.setAttribute('src',src)
         zoom_img.className = 'zoom_img_full'
