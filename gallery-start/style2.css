@@ -38,15 +38,26 @@ h1 {
     width: 0px;
 }
 
-.img_warp{
-    position: absolute;
-    top:10%;
-    left:30%;
+.img_wrap{
+    display: none;
 }
 
-.zoom_img{
-    min-width: 100%;
-    min-height: 100%;
+.img_wrap_dis{
+    background-color: seagreen;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 12%;
+    right: 12%;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.zoom_img_full{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
 }
 
 .big_right,.big_left,.close{
@@ -55,8 +66,8 @@ h1 {
 
 .big_left_dis,.big_right_dis,.close_dis{
     position: absolute;
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     cursor: pointer;
 }
 

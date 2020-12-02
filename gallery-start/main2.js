@@ -13,6 +13,12 @@ const zoom_bg = document.querySelector('.zoom_bg')
 const zoom_img = document.querySelector('.zoom_img')
 const zoom_img_wrap = document.querySelector('.img_wrap')
 
+
+let big_left = document.querySelector('.big_left')
+let big_right = document.querySelector('.big_right')
+let exit = document.querySelector('.close')
+let src = displayedImage.getAttribute('src')
+
 /* Looping through images */
 
 let imgSrc = ["images/balloon-sq1.jpg","images/balloon-sq2.jpg","images/balloon-sq3.jpg","images/balloon-sq4.jpg","images/balloon-sq5.jpg","images/balloon-sq6.jpg","images/leopardskin.jpg","images/pic1.jpg","images/pic2.jpg","images/pic3.jpg","images/pic4.jpg","images/pic5.jpg"];
@@ -73,65 +79,93 @@ const but_right = document.querySelector('.right');
 
 
 
-but_right.onclick = function(){
-    src = displayedImage.getAttribute('src');
-    for(let i = 0;i<imgSrc.length;i++){
-        if(src==imgSrc[i]){
-            if(i===imgSrc.length-1){
-                displayedImage.setAttribute('src',imgSrc[0])
-                break
+but_right.onclick = display_check_right()
+
+but_left.onclick = display_check_left()
+
+function display_check_right() {
+    return function () {
+        src = displayedImage.getAttribute('src');
+        for (let i = 0; i < imgSrc.length; i++) {
+            if (src == imgSrc[i]) {
+                if (i === imgSrc.length - 1) {
+                    displayedImage.setAttribute('src', imgSrc[0]);
+                    zoom_img.setAttribute('src',imgSrc[0])
+                    break;
+                }
+                else {
+                    i = i + 1;
+                    displayedImage.setAttribute('src', imgSrc[i]);
+                    zoom_img.setAttribute('src', imgSrc[i]);
+                    break;
+                }
             }
-            else{
-                i = i+1
-                displayedImage.setAttribute('src',imgSrc[i])
-                break
+            else {
+                continue;
             }
         }
-        else{
-            continue;
-        }
-    }
-    check()
+        check();
+    };
 }
 
-but_left.onclick = function(){
+function display_check_left() {
+    return function () {
+        
+        src = displayedImage.getAttribute('src');
+        for (let i = 0; i < imgSrc.length; i++) {
+            if (src == imgSrc[i]) {
+                if (i === 0) {
+                    displayedImage.setAttribute('src', imgSrc[imgSrc.length - 1]);
+                    zoom_img.setAttribute('src', imgSrc[imgSrc.length - 1]);
+                    break;
+                }
+                else {
+                    i = i - 1;
+                    displayedImage.setAttribute('src', imgSrc[i]);
+                    zoom_img.setAttribute('src', imgSrc[i]);
+                    break;
+                }
+            }
+            else {
+                continue;
+            }
+        }
+        check();
+    };
+}
+
+function small_check(){
     src = displayedImage.getAttribute('src');
-    for(let i = 0;i<imgSrc.length;i++){
-        if(src==imgSrc[i]){
-            if(i===0){
-                displayedImage.setAttribute('src',imgSrc[imgSrc.length-1])
-                break
-            }
-            else{
-                i = i-1
-                displayedImage.setAttribute('src',imgSrc[i])
-                break
-            }
-        }
-        else{
-            continue;
-        }
-    }
-    check()
+    zoom_img.setAttribute('src',src)
 }
 
 if(window.innerWidth>700){
-    big_left = document.querySelector('.big_left')
-    big_right = document.querySelector('.big_right')
-    exit = document.querySelector('.close')
-    src = displayedImage.getAttribute('src')
     overlay.onclick = function(){
-        let html = document.querySelector('html')
+        zoom_img_wrap.className = 'img_wrap_dis'
         zoom_img.setAttribute('src',src)
         zoom_img.className = 'zoom_img_full'
-        zoom_bg.className ='zoom_bg_full';/*
-        window.onscroll = function () { window.scrollTo(0, 0); };*/
+        zoom_bg.className ='zoom_bg_full';
+        window.onscroll = function () { window.scrollTo(0, 0); };
         doc_body.className = 'doc_body'
         big_left.className = 'big_left_dis'
         big_right.className = 'big_right_dis'
         exit.className = 'close_dis'
     }
 
+    big_left.onclick = display_check_left()
+
+    big_right.onclick = display_check_right()
+
+    exit.onclick = function(){
+        zoom_img_wrap.className = 'img_wrap'
+        zoom_img.className = 'zoom_img'
+        zoom_bg.className = 'zoom_bg'
+        doc_body.className = ''
+        big_left.className = 'big_left'
+        big_right.className = 'big_right'
+        exit.className = 'close'
+        window.onscroll = function(){}
+    }
 }
 
 
