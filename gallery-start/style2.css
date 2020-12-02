@@ -8,11 +8,38 @@ html {
 }
 
 body {
-  padding: 0 0 1em;
+  margin: 0 ;
+  height: 100%;
 }
 
 .doc_body{
     overflow: hidden;
+}
+
+@-webkit-keyframes fade-in{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+@keyframes fade-in{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+.dark_cover{
+    max-height: 0;
+    max-width: 0;
+}
+
+.dark_cover_dis{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    pointer-events: none;
+    -webkit-animation:fade-in .5s both;animation:fade-in .5s both
 }
 
 h1 {
@@ -30,6 +57,7 @@ h1 {
     z-index: 3;
     user-select: none;
     margin-bottom: 0;
+    -webkit-animation:fade-in  both;animation:fade-in 0.5s  both
 }
 
 .zoom_bg{
@@ -39,18 +67,24 @@ h1 {
 }
 
 .img_wrap{
-    display: none;
+    border: none;
+    position: absolute;
+    top: 14%;
+    left: 28%;
+    width: 640px;
+    height: 480px;
+    border-radius: 50px;
 }
 
 .img_wrap_dis{
-    background-color: seagreen;
+    box-sizing: content-box;
     position: absolute;
     top: 5%;
     bottom: 5%;
     left: 12%;
     right: 12%;
-    border: 1px solid black;
-    border-radius: 50px;
+    border: 10px solid black;
+    border-radius: 60px;
 }
 
 .zoom_img_full{
@@ -58,6 +92,12 @@ h1 {
     width: 100%;
     border: none;
     border-radius: 50px;
+    cursor: zoom-out;
+    
+}
+
+.zoom_img{
+    display: none;
 }
 
 .big_right,.big_left,.close{
@@ -117,9 +157,6 @@ h1 {
     min-width: 100%;
     max-height: 480px;
     min-height: 480px;
-}
-
-.overlay{
     cursor: zoom-in;
 }
   
@@ -137,6 +174,7 @@ h1 {
 .darken_cover{
     position: sticky;
     top: 20px;
+    left: 20px;
     z-index: 1;
     float: left;
 }

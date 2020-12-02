@@ -4,7 +4,6 @@ const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
 const btn = document.querySelector('.darken');
-const overlay = document.querySelector('.overlay');
 
 const img_bg = document.querySelector('.full_img_bg');
 const body = document.querySelector('body')
@@ -29,11 +28,9 @@ for(let i = 0;i<imgSrc.length;i++){
     const newImage = document.createElement('img');
     newImage.setAttribute('src', imgSrc[i]);
     newImage.setAttribute('class',('img_'+i));
-    hi = newImage.style.width = `${((100/imgSrc.length).toFixed(4))}%`;
+    newImage.style.width = `${((100/imgSrc.length).toFixed(4))}%`;
     thumbBar.appendChild(newImage);
 }
-
-body.style.width=window.width;
 
 function check(){
     src = displayedImage.getAttribute('src');
@@ -57,19 +54,15 @@ thumbBar.onclick = function(e){
 }
 
 /* Wiring up the Darken/Lighten button */
+let overlay = document.querySelector('.dark_cover')
 btn.onclick = function(){
     if(btn.textContent==="Darken"){
         btn.textContent = "Lighten";
-        overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
-        body.style.backgroundColor = 'rgba(0,0,0,0.6)'
-        img_bg.style.backgroundColor = 'rgb(117, 137, 139)'
-        img_bg.style.background = "linear-gradient(180deg, rgba(135,9,9,1) 0%, rgba(88,87,107,1) 50%, rgba(18,98,113,1) 100%)"
+        overlay.className = 'dark_cover_dis'
     }
     else{
         btn.textContent = "Darken";
-        overlay.style.backgroundColor = 'rgba(0,0,0,0)';
-        body.style.backgroundColor = ''
-        img_bg.style.background = ""
+        overlay.className = 'dark_cover'
     }
 }
 
@@ -139,8 +132,19 @@ function small_check(){
     zoom_img.setAttribute('src',src)
 }
 
+function leave(){
+    zoom_img_wrap.className = 'img_wrap'
+    zoom_img.className = 'zoom_img'
+    zoom_bg.className = 'zoom_bg'
+    doc_body.className = ''
+    big_left.className = 'big_left'
+    big_right.className = 'big_right'
+    exit.className = 'close'
+    window.onscroll = function(){}
+}
+
 if(window.innerWidth>700){
-    overlay.onclick = function(){
+    displayedImage.onclick = function(){
         zoom_img_wrap.className = 'img_wrap_dis'
         zoom_img.setAttribute('src',src)
         zoom_img.className = 'zoom_img_full'
@@ -157,15 +161,12 @@ if(window.innerWidth>700){
     big_right.onclick = display_check_right()
 
     exit.onclick = function(){
-        zoom_img_wrap.className = 'img_wrap'
-        zoom_img.className = 'zoom_img'
-        zoom_bg.className = 'zoom_bg'
-        doc_body.className = ''
-        big_left.className = 'big_left'
-        big_right.className = 'big_right'
-        exit.className = 'close'
-        window.onscroll = function(){}
+        leave()
+    }
+    zoom_img.onclick = function(){
+        leave()
     }
 }
+
 
 
