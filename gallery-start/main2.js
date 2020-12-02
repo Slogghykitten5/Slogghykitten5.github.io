@@ -6,7 +6,8 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('.darken');
 
 const img_bg = document.querySelector('.full_img_bg');
-const body = document.querySelector('body')
+const right = document.querySelector('right')
+const left = document.querySelector('left')
 
 const zoom_bg = document.querySelector('.zoom_bg')
 const zoom_img = document.querySelector('.zoom_img')
@@ -70,7 +71,6 @@ btn.onclick = function(){
 
 const but_left = document.querySelector('.left');
 const but_right = document.querySelector('.right');
-
 
 
 but_right.onclick = display_check_right()
@@ -141,7 +141,6 @@ function leave(){
     big_left.className = 'big_left'
     big_right.className = 'big_right'
     exit.className = 'close'
-    window.onscroll = function(){}
 }
 
 if(window.innerWidth>700){
@@ -151,7 +150,6 @@ if(window.innerWidth>700){
         zoom_img.setAttribute('src',src)
         zoom_img.className = 'zoom_img_full'
         zoom_bg.className ='zoom_bg_full';
-        window.onscroll = function () { window.scrollTo(0, 0); };
         doc_body.className = 'doc_body'
         big_left.className = 'big_left_dis'
         big_right.className = 'big_right_dis'

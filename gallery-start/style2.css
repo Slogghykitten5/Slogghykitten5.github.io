@@ -1,3 +1,15 @@
+@import url('../Fonts-css-and-codes/Dancing-script/Dancing-script-stylesheet.css');
+
+@keyframes fade-in{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+@keyframes fade-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;pointer-events: none;}
+}
+
 *{
   box-sizing: border-box;
 }
@@ -10,37 +22,11 @@ html {
 body {
   margin: 0 ;
   height: 100%;
+  animation: fade-in 3s both;
 }
 
 .doc_body{
     overflow: hidden;
-}
-
-@-webkit-keyframes fade-in{
-    0%{opacity:0}
-    100%{opacity:1}
-}
-@keyframes fade-in{
-    0%{opacity:0}
-    100%{opacity:1}
-}
-
-@-webkit-keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-@keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        pointer-events: none;
-    }
 }
 
 .dark_cover_dis{
@@ -57,24 +43,21 @@ body {
 h1 {
     font-family: helvetica, arial, sans-serif;
     text-align: center;
+    font-family: ds;
 }
 
 .zoom_bg_full{
     background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
     bottom: 0;
     left: 0;
-    position: absolute;
     right: 0;
     top: 0;
+    height: 100%;
+    width: 100%;
     z-index: 3;
     user-select: none;
     margin-bottom: 0;
-}
-
-.zoom_bg{
-    margin: 0%;
-    height: 0px;
-    width: 0px;
 }
 
 .img_wrap{
@@ -216,6 +199,9 @@ h1 {
     height: 100%;
     width: 100px;
     cursor: pointer;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 100px 120px no-repeat;
+    opacity: 0;
+    animation: fade-out 0.5s  both;
 }
   
 .right{
@@ -225,16 +211,17 @@ h1 {
     height: 100%;
     width: 100px;
     cursor: pointer;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 100px 120px no-repeat;
+    opacity: 0;
+    animation: fade-out 0.5s  both;
 }
 
 .full_img_bg:hover .left {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 100px 120px no-repeat;
-    animation: fade-in 0.5s both;    
+    animation: fade-in 0.5s  both;
 }
 
 .full_img_bg:hover .right {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 100px 120px no-repeat;
-    animation: fade-in 0.5s both;   
+    animation: fade-in 0.5s  both;
 }
 
 .thumb-bar{
