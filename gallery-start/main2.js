@@ -143,7 +143,7 @@ function leave(){
     exit.className = 'close'
 }
 
-let query_more_700 = window.matchMedia('min-width:700px');
+let query_more_700 = window.matchMedia('(min-width:700px)');
 
 if(query_more_700.matches){
     displayedImage.onclick = function(){
@@ -162,8 +162,20 @@ if(query_more_700.matches){
 
     big_right.onclick = display_check_right()
 
-    exit.onclick = leave()
+    exit.onclick = function(){leave()}
     zoom_img.onclick = function(){leave()}
+
+    console.log('hi')
+}
+else{
+    zoom_bg.style.animation = 'fade-out 0.5s  both'
+    zoom_img_wrap.className = 'img_wrap'
+    zoom_img.className = 'zoom_img'
+    doc_body.className = ''
+    big_left.className = 'big_left'
+    big_right.className = 'big_right'
+    exit.className = 'close'
+    console.log('bye')
 }
 
 
