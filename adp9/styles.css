@@ -89,6 +89,10 @@ main {
 
   @media screen and (min-width: 684px) and (max-width:901px) {
 
+body{
+  width: 100%;
+}
+
     header{
       border-radius: 20px;
     }
