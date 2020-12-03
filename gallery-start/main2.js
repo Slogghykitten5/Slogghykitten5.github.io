@@ -165,13 +165,6 @@ if(query_more_700.matches){
     exit.onclick = leave()
     zoom_img.onclick = function(){leave()}
 }
-else{
-displayedImage.onclick = function(){}
-big_left.onclick = function(){}
-big_right.onclick = function(){}
-exit.onclick = function(){}
-zoom_img.onclick = function(){}
-}
 
 
 
