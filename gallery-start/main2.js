@@ -143,7 +143,9 @@ function leave(){
     exit.className = 'close'
 }
 
-if(window.innerWidth>700){
+let query_more_700 = window.matchMedia('min-width:700px');
+
+if(query_more_700.matches){
     displayedImage.onclick = function(){
         zoom_bg.style.animation = 'fade-in 0.5s  both'
         zoom_img_wrap.className = 'img_wrap_dis'
@@ -155,6 +157,9 @@ if(window.innerWidth>700){
         big_right.className = 'big_right_dis'
         exit.className = 'close_dis'
     }
+else{
+displayedImage.onclick = function (){}
+}
 
     big_left.onclick = display_check_left()
 
