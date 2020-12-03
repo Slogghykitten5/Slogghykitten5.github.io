@@ -157,20 +157,20 @@ if(query_more_700.matches){
         big_right.className = 'big_right_dis'
         exit.className = 'close_dis'
     }
-else{
-displayedImage.onclick = function (){}
-}
 
     big_left.onclick = display_check_left()
 
     big_right.onclick = display_check_right()
 
-    exit.onclick = function(){
-        leave()
-    }
-    zoom_img.onclick = function(){
-        leave()
-    }
+    exit.onclick = leave()
+    zoom_img.onclick = function(){leave()}
+}
+else{
+displayedImage.onclick = function(){}
+big_left.onclick = function(){}
+big_right.onclick = function(){}
+exit.onclick = function(){}
+zoom_img.onclick = function(){}
 }
 
 
