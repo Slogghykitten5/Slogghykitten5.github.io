@@ -13,6 +13,7 @@ const zoom_bg = document.querySelector('.zoom_bg')
 const zoom_img = document.querySelector('.zoom_img')
 const zoom_img_wrap = document.querySelector('.img_wrap')
 
+const query_more_700 = window.matchMedia('(min-width:700px)');
 
 let big_left = document.querySelector('.big_left')
 let big_right = document.querySelector('.big_right')
@@ -24,35 +25,38 @@ let src = displayedImage.getAttribute('src')
 let imgSrc = ["images/balloon-sq1.jpg","images/balloon-sq2.jpg","images/balloon-sq3.jpg","images/balloon-sq4.jpg","images/balloon-sq5.jpg","images/balloon-sq6.jpg","images/leopardskin.jpg","images/pic1.jpg","images/pic2.jpg","images/pic3.jpg","images/pic4.jpg","images/pic5.jpg"];
 
 displayedImage.setAttribute('src',imgSrc[0]);
-
-for(let i = 0;i<imgSrc.length;i++){
-    const newImage = document.createElement('img');
-    newImage.setAttribute('src', imgSrc[i]);
-    newImage.setAttribute('class',('img_'+i));
-    newImage.style.width = `${((100/imgSrc.length).toFixed(4))}%`;
-    thumbBar.appendChild(newImage);
-}
-
-function check(){
-    src = displayedImage.getAttribute('src');
+if(query_more_700.matches){
     for(let i = 0;i<imgSrc.length;i++){
-        need_img = thumbBar.querySelector('.img_'+i);
-        if(src === imgSrc[i]){
-            need_img.style.border = '10px double black';
+        const newImage = document.createElement('img');
+        newImage.setAttribute('src', imgSrc[i]);
+        newImage.setAttribute('class',('img_'+i));
+        newImage.style.width = `${((100/imgSrc.length).toFixed(4))}%`;
+        thumbBar.appendChild(newImage);
+    }
+
+    function check(){
+        src = displayedImage.getAttribute('src');
+        for(let i = 0;i<imgSrc.length;i++){
+            need_img = thumbBar.querySelector('.img_'+i);
+            if(src === imgSrc[i]){
+                need_img.style.border = '10px double black';
+            }
+            else{
+                need_img.style.border = '';
+            }
         }
-        else{
-            need_img.style.border = '';
-        }
+    }
+    
+    check()
+    
+    thumbBar.onclick = function(e){
+        s = e.target.getAttribute('src');
+        displayedImage.setAttribute('src', s);
+        check();
     }
 }
 
-check()
 
-thumbBar.onclick = function(e){
-    s = e.target.getAttribute('src');
-    displayedImage.setAttribute('src', s);
-    check();
-}
 
 /* Wiring up the Darken/Lighten button */
 let overlay = document.querySelector('.dark_cover')
@@ -143,7 +147,7 @@ function leave(){
     exit.className = 'close'
 }
 
-let query_more_700 = window.matchMedia('(min-width:700px)');
+
 
 if(query_more_700.matches){
     displayedImage.onclick = function(){
@@ -168,6 +172,7 @@ if(query_more_700.matches){
     console.log('hi')
 }
 else{
+    displayedImage.onclick = function(){console.log('it works')}
     zoom_bg.style.animation = 'fade-out 0.5s  both'
     zoom_img_wrap.className = 'img_wrap'
     zoom_img.className = 'zoom_img'

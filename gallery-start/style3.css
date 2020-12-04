@@ -21,66 +21,22 @@ html {
 
 body{
     padding: 0 0 1em;
-}
-
-body {
-  margin: 0 ;
-  height: 100%;
-  animation: fade-in 3s both;
+    margin: 0 ;
+    height: 100%;
+    animation: fade-in 3s both;
 }
 
 .doc_body{
     overflow: hidden;
 }
 
-.left{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    width: 100px;
-    cursor: pointer;
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 50px 60px no-repeat;
-}
-
-.right{
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 100px;
-    cursor: pointer;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 50px 60px no-repeat;
-}
-
-
-
-.full_img_bg{
-    border: 2px soild black;
-}
-
-.full-img {
-    left:0px;
-    width: 100%;
-    height: 240px;
-}
-
-.displayed-img{
-    max-width: 100%;
-    max-height: 240px;
-    min-height: 240px;
-    border:none;
-    border-radius: 0px;
-    cursor: default;
-}
- 
-.left{
-    background:linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/iconfinder-icon(1).svg")center / 50px 60px no-repeat; 
-    z-index: 1;
-}
-
-.right {
-    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%),url("Icons/iconfinder-icon.svg")center / 50px 60px no-repeat;
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: helvetica, arial, sans-serif;
+    text-align: center;
+    font-family: ds;
+    font-size: 45px;
 }
 
 .left,.right{
@@ -88,32 +44,26 @@ body {
     width:10%;
 }
 
-.thumb-bar{
-    display:none;
-}
-
-.dark_cover_dis{
-    position: fixed;
-    width: 100%;
+.left{
+    position: absolute;
+    left: 0px;
+    top: 0px;
     height: 100%;
-    left: 0;
+    width: 10%;
+    cursor: pointer;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 50px 60px no-repeat;
+    z-index: 1;
+}
+
+.right{
+    position: absolute;
+    right: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 2;
-    pointer-events: none;
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 50px 60px no-repeat;
 }
-
-h1 {
-    font-family: helvetica, arial, sans-serif;
-    text-align: center;
-    font-family: ds;
-}
-
-.big_left,.big_right,.zoom_img,.close{
-    display: none;
-}
-
-
 
 
 .full_img_bg{
@@ -130,7 +80,6 @@ h1 {
     top: 0;
     width: 100%;
     height: 240px;
-    cursor: zoom-in;
 }
 
 .displayed-img{
@@ -141,16 +90,20 @@ h1 {
     max-height: 240px;
     min-height: 240px;
 }
-  
-.overlay {
-    border: 2px solid black;
-    border-radius: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.dark_cover_dis{
+    position: fixed;
     width: 100%;
-    height: 480px;
-    background-color: rgba(0,0,0,0);
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.big_left,.big_right,.zoom_img,.close{
+    display: none;
 }
 
 .darken_cover{
@@ -173,6 +126,23 @@ h1 {
     cursor: pointer;
 }
 
+.thumb-bar{
+    display: inline;
+    position: absolute;
+    background-color: rgb(224,19,19);
+    background: linear-gradient(315deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
+    min-height: min-content;
+}
+
+.thumb-bar img{
+    display: inline;
+    position: relative;
+    min-height: 100px;
+    max-height: 100px;
+    float: left;
+    cursor: pointer;
+}
+
 #hi{
     margin-top: 1000px;
     height: 100px;
@@ -180,14 +150,40 @@ h1 {
     background-color: rgba(224,19,19,1);
 }
 
-
-
-
-
-
-
-
 @media screen and (min-width:700px){
+
+    h1{
+        font-size: 55px;
+    }
+
+    .thumb-bar{
+        display: inline;
+        position: absolute;
+        background-color: rgb(224,19,19);
+        background: linear-gradient(315deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
+        min-height: min-content;
+    }
+
+    .thumb-bar img{
+        display: inline;
+        position: relative;
+        min-height: 100px;
+        max-height: 100px;
+        float: left;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width:900px){
+
+    h1{
+        font-size: 60px;
+    }
     
     .big_left_dis,.big_right_dis,.close_dis{
         position: absolute;
@@ -264,41 +260,16 @@ h1 {
     }
 
     .left{
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        height: 100%;
-        width: 100px;
-        cursor: pointer;
         background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 100px 120px no-repeat;
-        opacity: 0;
         animation: fade-out 0.5s  both;
     }
 
     .right{
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 100px;
-        cursor: pointer;
         background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 100px 120px no-repeat;
-        opacity: 0;
         animation: fade-out 0.5s  both;
-    }
-
-    .full_img_bg{
-        position: relative;
-        width: 100%;
-        height: min-content;
-        user-select: none;
-        background-color: rgb(214, 250, 255); 
-        background: linear-gradient(180deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
     }
     
     .full-img {
-        position: relative;
-        top: 0;
         left: 28%;
         width: 640px;
         height: 480px;
@@ -306,12 +277,8 @@ h1 {
     }
     
     .displayed-img{
-        position: relative;
-        top: 0;
         border: 2px solid black;
         border-radius: 50px;
-        max-width: 100%;
-        min-width: 100%;
         max-height: 480px;
         min-height: 480px;
     }
@@ -322,23 +289,6 @@ h1 {
     
     .full_img_bg:hover .right {
         animation: fade-in 0.5s  both;
-    }
-
-    .thumb-bar{
-        display: inline;
-        position: absolute;
-        background-color: rgb(224,19,19);
-        background: linear-gradient(315deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
-        min-height: min-content;
-    }
-
-    .thumb-bar img{
-        display: inline;
-        position: relative;
-        min-height: 100px;
-        max-height: 100px;
-        float: left;
-        cursor: pointer;
     }
     
 }
