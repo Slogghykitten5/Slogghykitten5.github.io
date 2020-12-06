@@ -1,3 +1,4 @@
+const favicon = document.querySelector('.favicon')
 const doc_body = document.querySelector('body')
 
 const displayedImage = document.querySelector('.displayed-img');
@@ -24,6 +25,12 @@ let src = displayedImage.getAttribute('src')
 
 let imgSrc = ["images/balloon-sq1.jpg","images/balloon-sq2.jpg","images/balloon-sq3.jpg","images/balloon-sq4.jpg","images/balloon-sq5.jpg","images/balloon-sq6.jpg","images/leopardskin.jpg","images/pic1.jpg","images/pic2.jpg","images/pic3.jpg","images/pic4.jpg","images/pic5.jpg"];
 
+function f_check(){
+    ssrc = displayedImage.getAttribute('src');
+    favicon.setAttribute("href", src);
+}
+
+
 displayedImage.setAttribute('src',imgSrc[0]);
 if(query_more_700.matches){
     for(let i = 0;i<imgSrc.length;i++){
@@ -45,6 +52,8 @@ if(query_more_700.matches){
                 need_img.style.border = '';
             }
         }
+
+        f_check()
     }
     
     check()
@@ -53,12 +62,11 @@ if(query_more_700.matches){
         s = e.target.getAttribute('src');
         displayedImage.setAttribute('src', s);
         check();
+        f_check()
     }
 }
 
-function f_check(){
-    favicon.setAttribute("href", src);
-}
+
 
 /* Wiring up the Darken/Lighten button */
 let overlay = document.querySelector('.dark_cover')
