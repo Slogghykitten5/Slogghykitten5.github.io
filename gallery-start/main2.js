@@ -56,7 +56,9 @@ if(query_more_700.matches){
     }
 }
 
-
+function f_check(){
+    favicon.setAttribute("href", src);
+}
 
 /* Wiring up the Darken/Lighten button */
 let overlay = document.querySelector('.dark_cover')
@@ -103,6 +105,7 @@ function display_check_right() {
             }
         }
         check();
+        f_check();
     };
 }
 
@@ -129,6 +132,7 @@ function display_check_left() {
             }
         }
         check();
+        f_check();
     };
 }
 
