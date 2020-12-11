@@ -21,35 +21,43 @@
         if(this.gender === 'male'){
           this.pronoun = 'He'
           this.is_are = 'is'
+          this.s_or_not = 's'
         }
         else if(this.gender === 'female'){
           this.pronoun = 'She'
           this.is_are = 'is'
+          this.s_or_not = 's'
         }
         else{
           this.pronoun = 'They'
           this.is_are = 'are'
+          this.s_or_not = ''
         }
         this.interests = interests;
 
-        for(i=0;i<this.interests.length;i++){
-          if(i = this.interests.length-1){
-            
-          }
-        }
+        
         
         
         
         this.bio = function() {
-          if(this.interests.length === 1)
+          let text = this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old.'+ this.pronoun +' like'+this.s_or_not+' ' 
 
-          alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+          for(i=0;i<this.interests.length;i++){
+          if(i === this.interests.length-1){
+            text += 'and '+this.interests[i]+'.'
+          }
+          else{
+            text += this.interests[i]+', ';
+          }
+        }
+
+          alert(text);
         };
         this.greeting = function() {
           alert('Hi! I\'m ' + this.name.first + '.');
         };
       };
 
-      let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+      let person1 = new Person('Bob', 'Smith', 32, 'apache helicopter', ['music', 'skiing','dancing','coding']);
     </script>
 </html>
