@@ -35,22 +35,17 @@
         }
         this.interests = interests;
 
-        
-        
-        
-        
         this.bio = function() {
           let text = this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old.'+ this.pronoun +' like'+this.s_or_not+' ' 
 
           for(i=0;i<this.interests.length;i++){
-          if(i === this.interests.length-1){
-            text += 'and '+this.interests[i]+'.'
+            if(i === this.interests.length-1){
+              text += 'and '+this.interests[i]+'.'
+            }
+            else{
+              text += this.interests[i]+', ';
+            }
           }
-          else{
-            text += this.interests[i]+', ';
-          }
-        }
-
           alert(text);
         };
         this.greeting = function() {
