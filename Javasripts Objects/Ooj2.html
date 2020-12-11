@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Object-oriented JavaScript example</title>
+    <title>Object-oriented JavaScript class example</title>
   </head>
 
   <body>
@@ -11,15 +11,45 @@
   </body>
 
     <script>
-
-        function createNewPerson(name) {
-        const obj = {};
-        obj.name = name;
-        obj.greeting = function() {
-            alert('Hi! I\'m ' + obj.name + '.');
+      function Person(first, last, age, gender, interests) {
+        this.name = {
+          'first': first,
+          'last' : last
         };
-        return obj;
+        this.age = age;
+        this.gender = gender.toLowerCase();
+        if(this.gender === 'male'){
+          this.pronoun = 'He'
+          this.is_are = 'is'
         }
+        else if(this.gender === 'female'){
+          this.pronoun = 'She'
+          this.is_are = 'is'
+        }
+        else{
+          this.pronoun = 'They'
+          this.is_are = 'are'
+        }
+        this.interests = interests;
 
+        for(i=0;i<this.interests.length;i++){
+          if(i = this.interests.length-1){
+            
+          }
+        }
+        
+        
+        
+        this.bio = function() {
+          if(this.interests.length === 1)
+
+          alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        };
+        this.greeting = function() {
+          alert('Hi! I\'m ' + this.name.first + '.');
+        };
+      };
+
+      let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
     </script>
 </html>
