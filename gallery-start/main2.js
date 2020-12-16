@@ -3,6 +3,7 @@ const doc_body = document.querySelector('body')
 
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
+const thumb_img = document.querySelector('thumbar img')
 
 const btn = document.querySelector('.darken');
 
@@ -26,13 +27,14 @@ let src = displayedImage.getAttribute('src')
 let imgSrc = ["images/balloon-sq1.jpg","images/balloon-sq2.jpg","images/balloon-sq3.jpg","images/balloon-sq4.jpg","images/balloon-sq5.jpg","images/balloon-sq6.jpg","images/leopardskin.jpg","images/pic1.jpg","images/pic2.jpg","images/pic3.jpg","images/pic4.jpg","images/pic5.jpg"];
 
 function f_check(){
-    ssrc = displayedImage.getAttribute('src');
+    src = displayedImage.getAttribute('src');
     favicon.setAttribute("href", src);
 }
 
 
 displayedImage.setAttribute('src',imgSrc[0]);
-if(query_more_700.matches){
+
+function load_thumb_img() {
     for(let i = 0;i<imgSrc.length;i++){
         const newImage = document.createElement('img');
         newImage.setAttribute('src', imgSrc[i]);
@@ -40,32 +42,35 @@ if(query_more_700.matches){
         newImage.style.width = `${((100/imgSrc.length).toFixed(4))}%`;
         thumbBar.appendChild(newImage);
     }
-
-    function check(){
-        src = displayedImage.getAttribute('src');
-        for(let i = 0;i<imgSrc.length;i++){
-            need_img = thumbBar.querySelector('.img_'+i);
-            if(src === imgSrc[i]){
-                need_img.style.border = '10px double black';
-            }
-            else{
-                need_img.style.border = '';
-            }
-        }
-
-        f_check()
-    }
-    
-    check()
-    
-    thumbBar.onclick = function(e){
-        s = e.target.getAttribute('src');
-        displayedImage.setAttribute('src', s);
-        check();
-        f_check()
-    }
 }
 
+   
+load_thumb_img()
+
+function check(){
+    src = displayedImage.getAttribute('src');
+    for(let i = 0;i<imgSrc.length;i++){
+        need_img = thumbBar.querySelector('.img_'+i);
+        if(src === imgSrc[i]){
+            need_img.style.border = '10px double black';
+        }
+        else{
+            need_img.style.border = '';
+        }
+    }
+
+    f_check()
+}
+
+check()
+
+thumbBar.onclick = function(e){
+    s = e.target.getAttribute('src');
+    displayedImage.setAttribute('src', s);
+    check();
+    f_check()
+}
+    
 
 
 /* Wiring up the Darken/Lighten button */
