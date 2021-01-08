@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Object-oriented JavaScript example</title>
+    <title>Object-oriented JavaScript class further exercises</title>
   </head>
 
   <body>
@@ -11,22 +11,15 @@
   </body>
 
     <script>
+      function Shape(name,sides,length){
+        this.name = name,
+        this.sides = sides,
+        this.length = length
+      }
 
-const person = {
-    name : {
-  first: 'Bob',
-  last: 'Smith'
-},
-  age: 32,
-  gender: 'male',
-  interests: ['music', 'skiing'],
-  bio: function() {
-    alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
-  },
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name[0] + '.');
-  }
-};
+      let square = new Shape('square',4,5)
+      let triangle = Object.create(square)
+
 
     </script>
 </html>
