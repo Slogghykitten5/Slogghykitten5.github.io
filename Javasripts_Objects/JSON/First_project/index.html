@@ -27,11 +27,11 @@
 
     let request = new XMLHttpRequest();
     request.open('GET',requestURL);
-    request.responseType = 'json';
+    request.responseType = 'text';
     request.send();
 
     request.onload = function(){
-      const superheroes = request.response;
+      const superheroes = JSon.parse(request.response);
       populateHeader(superheroes);
       showHeroes(superheroes);
     }
