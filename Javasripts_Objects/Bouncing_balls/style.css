@@ -1,25 +1,68 @@
+*{
+  box-sizing: border-box;
+}
+
 html, body {
-    margin: 0;
-  }
-  
-  html {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    height: 100%;
-  }
-  
-  body {
-    overflow: hidden;
-    height: inherit;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    letter-spacing: -1px;
-    position: absolute;
-    margin: 0;
-    top: -4px;
-    right: 5px;
-  
-    color: transparent;
-    text-shadow: 0 0 4px white;
-  }
+  margin: 0;
+}
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: inherit;
+}
+
+h1 {
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  position: absolute;
+  margin: 0;
+  top: -4px;
+  right: 5px;
+  color: transparent;
+  text-shadow: 1px 10px 2px white;
+}
+
+.hi {
+  background-color: rgb(255, 255, 255, 0.3);
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.myNum ,.text{
+  margin: 10px;
+  margin-left: 5px;
+  height: 20px;
+}
+
+.text{
+  color: white;
+  height: 30px;
+}
+
+.b_input_div{
+  display: flex;
+}
+
+.add_ball{
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.add_b_div{
+  margin: 2px;
+  border:1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
