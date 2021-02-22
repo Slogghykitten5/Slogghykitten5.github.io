@@ -4,18 +4,30 @@
     <meta charset="utf-8">
     <title>Bouncing balls</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
 
   <body>
-    <h1 class="heading">bouncing balls</h1>
+    <h1 class="heading">Bouncing Balls</h1>
     
     <canvas></canvas>
-    <div class="hi">
-      <p class="text">Hello</p>
-      <div class="b_input_div">
-      <input type="number" class="myNum" max="10000" min="0" value="0" placeholder="Number of balls">
-      <div class="add_b_div"><p class="add_ball">Add Balls</p></div>
+    <div class="control_controls"><button class="control_p">Show</button></div>
+    <div class="total_controls">
+      
+    <div class="controls scale_out">
+      <div class="b_input_div add">
+        <input type="number" class="myNum_add" max="10000" min="0" placeholder="Number of balls">
+        <div class="add_b_div"><p class="add_ball">Add Balls</p></div>
       </div>
+      <div class="b_input_div remove">
+        <input type="number" class="myNum_remove" max="10000" min="0" placeholder="Number of balls">
+        <div class="remove_b_div"><p class="remove_ball">Remove Balls</p></div>
+      </div>
+      <div class="start_div"><p class="start">Start</p></div>
+      <div class="stop_div"><p class="stop">Stop</p></div>
+      <div class="randomize_div"><p class="randomize">Randomize</p></div>
+      <div class="reverse_div"><p class="reverse">Reverse</p></div>
+    </div>
     </div>
     <!--<script src="main.js"></script>-->
     <script src="main.js"></script>
