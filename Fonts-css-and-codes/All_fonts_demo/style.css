@@ -1,0 +1,39 @@
+@import url('../Amatic-SC/stylesheet.css');
+@import url('../Chonburi/stylesheet.css');
+@import url('../Dancing-script/Dancing-script-stylesheet.css');
+@import url('../Itim/stylesheet.css');
+@import url('../Pacifico/stylesheet.css');
+@import url('../Raleway-thin/Raleway-thin-stylesheet.css');
+
+p:first-child{
+    font-size: 50px;
+}
+
+p:last-child{
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.amatic_sc{
+    font-family: 'Amatic SC', cursive;
+}
+
+.chonburi{
+    font-family: 'Chonburi', cursive;
+}
+
+.dancing_script{
+    font-family: 'Dancing Script', cursive;
+}
+
+.itim{
+    font-family: 'Itim', cursive;
+}
+
+.pacifico{
+    font-family: 'Pacifico', cursive;
+}
+
+.raleway_thin{
+    font-family: 'Raleway', sans-serif;
+}

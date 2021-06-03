@@ -1,0 +1,290 @@
+@import url(../../../Fonts-css-and-codes/Amatic-SC/stylesheet_only_woff.css);
+@import url(../../../Fonts-css-and-codes/Pacifico/stylesheet_only_woff.css);
+
+:root{
+    --blue: hsl(198, 61%, 39%);
+    --peacock:hsl(162, 43%, 46%);
+    --yellow:hsl(42, 93%, 64%);
+    --dark_yellow:hsl(39, 100%, 55%);
+    --light_yellow:hsl(42, 100%, 73%);
+    --orange: hsl(21, 89%, 56%);
+    --light_orange:hsl(21, 100%, 81%);
+    --red: hsl(359, 94%, 62%);
+    --light_red: hsl(359, 93%, 72%);
+    --dark_red: hsl(359, 100%, 50%);
+    --dark_orange:hsl(30, 88%, 41%);
+    --light_orange_2:hsl(39, 85%, 55%);
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+img{
+    user-select: none;
+}
+
+header{
+    background-color:var(--peacock);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+    padding: 10px;
+    display: flex;
+}
+
+.logo_wrapper{
+    display: flex;
+}
+
+.logo_wrapper p{
+    font-size: 2rem;
+    margin: 0px;
+}
+
+nav{
+    height: max-content;
+}
+
+nav ul{
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-between;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    display: inline-block;
+    height: 100%;
+    background-color: var(--red);
+    padding: 20px;
+    height: 100%;
+    color: white;
+}
+
+.sec_1_content_wrapper h1{
+    font-size: 5vmax;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+.sec_1_content_wrapper p{
+    font-size: 3vmax;
+    text-align: center;
+    font-family: 'Amatic SC',cursive;
+}
+
+main{
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+main > section{
+    scroll-snap-align: start;
+    min-height: 100%;
+    padding: 20px;
+    padding-top: 70px;
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.no-scroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.no-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+#welcome-section{
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects{
+    background-color: var(--orange);
+}
+
+h2{
+    font-size: 4vmax;
+    text-align: center;
+    font-family: 'Pacifico',cursive;
+}
+
+#contact{
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 99%;
+}
+
+a{
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.project_wrapper{
+    display: flex;
+    gap: 10px 10px;
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+    padding: 10px;
+    scrollbar-color: var(--light_orange) var(--orange);
+    scroll-snap-type: x mandatory;
+}
+
+.project_wrapper > .project{
+    scroll-snap-align: start;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    scrollbar-color: #575757 #1d1d1d;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--orange);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--light_orange) ;
+}
+
+::-webkit-scrollbar-button:horizontal:decrement {
+    background: center / contain no-repeat url("../../../MDN/gallery-start/Icons/arrow-left-01-256.webp");
+}
+
+::-webkit-scrollbar-button:horizontal:increment {
+    background: center / contain no-repeat url("../../../MDN/gallery-start/Icons/arrow-right-01-256.webp");
+}
+
+.project{
+    background-color:var(--blue);
+    border-radius: 20px;
+    border: 10px solid rgb(0,0,0);
+    min-width: 105%;
+}
+
+figure{
+    margin: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+figcaption{
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-family: 'Amatic SC',cursive;
+    font-size: 3vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.preview_wrapper{
+    height: 200px;
+    width: 100%;
+    overflow:hidden;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.project_link img{
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.project_link img:hover{
+    transform: scale(1.2);
+}
+.controls_wrapper{
+    display: none;
+}
+
+@media screen and (min-width:600px) {
+    .project{
+        min-width: 50.5%;
+    }
+}
+
+@media screen and (min-width:950px) {
+    .project{
+        min-width: 33.1%;
+    }
+
+    figcaption{
+        font-size: 2.5vmax;
+    }
+}
+
+@media (any-hover: hover) {
+
+    .controls_wrapper{
+        display: initial;
+        top: 0px;
+        right: 10px;
+        bottom: 0px;
+        width: max-content;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .controls{
+        background-color: var(--dark_orange);
+    }
+
+    .control{
+        background-color: var(--light_orange_2);
+        height: 75px;
+        width: 75px;
+        margin: 10px;
+    }
+
+    .control img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .part_1{
+        background-color: var(--dark_yellow);
+    }
+
+    .part_1>.control{
+        background-color: var(--light_yellow);
+    }
+
+    .part_3{
+        background-color: var(--dark_red);
+    }
+
+    .part_3>.control{
+        background-color: var(--light_red);
+    }
+}

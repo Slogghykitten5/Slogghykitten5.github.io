@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('font_files/DancingScript-Bold.eot');
+    src: url('font_files/DancingScript-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font_files/DancingScript-Bold.woff2') format('woff2'),
+        url('font_files/DancingScript-Bold.woff') format('woff'),
+        url('font_files/DancingScript-Bold.ttf') format('truetype'),
+        url('font_files/DancingScript-Bold.svg#DancingScript-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,118 @@
+@import url('../../../Fonts-css-and-codes/Itim/stylesheet.css');
+@import url('../../../Fonts-css-and-codes/Chonburi/stylesheet.css');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0px;
+}
+
+main{
+    background: rgb(43,17,65);
+    background-image: linear-gradient(130deg, rgb(70, 1, 126 , 0.3) 0%, rgba(211, 91, 252, 0.3) 100%),
+    url("icons/firefox_logo.svg");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: larger;
+    color: white;
+    padding: 5%;
+    font-family: 'Itim', cursive;
+}
+
+h1{
+    font-size: xxx-large;
+}
+
+.title_div , h1 , form{
+    max-width: max-content;
+    margin: auto;
+    margin-top: 1vh;
+}
+
+.title_div , h1{
+    text-align: center;
+    font-family: 'Chonburi', cursive;
+}
+
+.title_div{
+    font-size: x-large;
+}
+
+form{
+    max-width: max-content;
+    margin: auto;
+}
+
+input{
+    font-family: 'Itim', cursive;
+}
+
+.input.larger{
+    padding: 0px;
+    display: inline;
+    min-width: 30px;
+    height: 30px;
+}
+
+.input_div{
+    display: flex;
+    margin: 10px 0px 10px 0px;
+}
+
+.input_div_column{
+    flex-direction: column;
+}
+
+.label , .input{
+    margin: inherit;
+    font-size: larger;
+    padding-left: 10px;
+}
+
+.label{
+    margin: 10px;
+}
+
+.typing_label{
+    font-size: larger;
+}
+
+.typing{
+    height: max-content;
+    font-size: larger;
+    border-radius: 20px;
+}
+
+select{
+    font-family: 'Itim' , cursive;
+}
+
+.question_div{
+    font-size: x-large;
+}
+
+input[type=number] {
+    appearance: textfield;
+}
+
+.textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: max-content;
+    padding: 1%;
+    font-family: 'Itim', cursive;
+}
+
+.submit_div{
+    max-width: max-content;
+    margin: auto;
+}
+
+input[type=submit]{
+    margin: 20px;
+    padding: 20px;
+}

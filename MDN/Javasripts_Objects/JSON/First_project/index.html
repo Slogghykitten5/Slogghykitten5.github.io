@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Our superheroes</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+      <header>
+
+      </header>
+
+      <section>
+
+      </section>
+
+    <script>
+    const header = document.querySelector('header');
+    const section = document.querySelector('section');
+
+    let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+
+    let request = new XMLHttpRequest();
+    request.open('GET',requestURL);
+    request.responseType = 'text';
+    request.send();
+
+    request.onload = function(){
+      const superheroes = JSON.parse(request.response);
+      populateHeader(superheroes);
+      showHeroes(superheroes);
+    }
+
+    function populateHeader(obj){
+      const heading = document.createElement('h1');
+      heading.textContent = obj['squadName'];
+      header.appendChild(heading);
+
+      const para = document.createElement('p');
+      para.textContent = `In the hometown of ${obj.homeTown} since ${obj.formed}`
+      header.appendChild(para)
+    }
+
+    function showHeroes(obj){
+      for(i = 0;i<obj.members.length;i++){
+        const member_now = obj.members[i];
+
+        const article = document.createElement('article');
+        const name = document.createElement('h2');
+        const s_identity = document.createElement('p');
+        const age = document.createElement('p');
+        const power = document.createElement('p')
+        const list = document.createElement('ul');
+        name.textContent = member_now.name;
+        s_identity.textContent = `Secret Identity: ${member_now.secretIdentity}`
+        age.textContent = `Age: ${member_now.age}`;
+        power.textContent = `Superpowers:`
+
+        for(j=0;j<member_now.powers.length;j++){
+          const listItem = document.createElement('li');
+          listItem.textContent = member_now.powers[j];
+          list.appendChild(listItem);
+        }
+
+        section.appendChild(article);
+        article.appendChild(name);
+        article.appendChild(s_identity);
+        article.appendChild(age)
+        article.appendChild(power)
+        article.appendChild(list)
+
+      }
+    }
+
+    </script>
+  </body>
+</html>

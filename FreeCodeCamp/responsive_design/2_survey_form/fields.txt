@@ -1,0 +1,7 @@
+1.name
+2.email
+3.age
+4.your current browser - firefox(Yay!) , chrome , microsoft-edge , opera , duckduckgo , brave , samsung-internet (dropdown)
+5.recommend? - definitly , maybe , not sure (option select)
+6.best feature - sleek design , inbuilt screenshot , reader mode , large number of mobile and desktop addons and features , containers ,  awesome privacy , open source , passionate community 
+7.comments/suggestions

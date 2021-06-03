@@ -1,0 +1,165 @@
+@import url('../../../Fonts-css-and-codes/Raleway-thin/Raleway-thin-stylesheet-only-woff.css');
+@import url('../../../Fonts-css-and-codes/Itim/stylesheet_only_woff.css');
+@import url('../../../Fonts-css-and-codes/Chonburi/stylesheet_only_woff.css');
+
+:root{
+    --code_blue : hsl(207, 100%, 61%);
+    --code_blue_light : hsl(207, 100%, 72%);
+    --green : hsl(73, 51%, 51%);
+    --blue : hsl(193, 94%, 37%);
+}
+
+@keyframes button_hover {
+    0%{
+    }
+    100%{
+        color: white;
+        font-size: 22px;
+        background-color: var(--green);
+    }
+}
+
+@keyframes button_hover_reverse {
+    0%{
+        color: white;
+        font-size: 22px;
+        background-color: var(--green);
+    }
+    100%{
+        font-size: 18px;
+        background-color: white;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin: 10px;
+}
+
+body{
+    display: flex;
+    gap: 10px;
+    margin: 0;
+}
+
+.main_header{
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    border-right: 1px solid black;
+}
+
+.main_header header{
+    padding: 20px;
+}
+
+.main_header header h1{
+    text-align: center;
+    width: max-content;
+    max-width: 100%;
+    margin: auto;
+    font-family: 'Chonburi', cursive;
+    font-size: 1.5em;
+}
+
+nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0px;
+
+}
+
+nav ul li{
+    border: 1px solid black;
+    margin: 0px;
+    flex-grow: 1;
+}
+
+nav ul li a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Itim', cursive;
+    font-size: 18px;
+    color: black;
+    animation: button_hover_reverse 0.5s linear 0s 1 normal forwards;
+}
+@media (any-hover: hover) {
+    nav ul li a:hover , nav ul li a:active{
+        animation: button_hover 0.5s linear 0s 1 normal forwards;
+    }
+}
+
+#main-doc{
+    padding: 10px;
+}
+
+#main-doc h1{
+    display: none;
+}
+
+section h2{
+    font-family: 'Itim', cursive;
+    font-size: 1.75em;
+    letter-spacing: 1px;
+}
+
+section header{
+    background-color: white;
+    position:sticky;
+    top:0px;
+    bottom: 0px;
+}
+
+section p , section ul li{
+    font-family: 'Raleway', sans-serif;
+}
+
+code{
+    background-color: #f7f7f7;
+    display: block;
+    border-left: 10px solid var(--blue);
+    padding: 10px;
+    font-family: monospace;
+}
+
+.multiline{
+    display: flex;
+    flex-direction: column;
+}
+
+.multiline>span{
+    margin: 5px;
+}
+
+@media screen and (max-width:700px) {
+    body{
+        display: initial;
+    }
+
+    .main_header{
+        height: auto;
+        position:static;
+    }
+
+    nav ul li a{
+        height: 5vmax;
+        
+    }
+}

@@ -1,0 +1,294 @@
+@import url('../../Fonts-css-and-codes/Dancing-script/Dancing-script-stylesheet.css');
+
+@keyframes fade-in{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+@keyframes fade-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;pointer-events: none;}
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+  min-height: 100%;
+}
+
+body{
+    padding: 0 0 1em;
+    margin: 0 ;
+    height: 100%;
+    animation: fade-in 3s both;
+}
+
+.doc_body{
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: helvetica, arial, sans-serif;
+    text-align: center;
+    font-family: ds;
+    font-size: 45px;
+}
+
+.left,.right{
+    height: 100%;
+    width:10%;
+}
+
+.left{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 50px 60px no-repeat;
+    z-index: 1;
+}
+
+.right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 50px 60px no-repeat;
+}
+
+
+.full_img_bg{
+    position: relative;
+    width: 100%;
+    height: min-content;
+    user-select: none;
+    background-color: rgb(214, 250, 255); 
+    background: linear-gradient(180deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
+}
+
+.full-img {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 240px;
+}
+
+.displayed-img{
+    position: relative;
+    top: 0;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 240px;
+    min-height: 240px;
+}
+
+.dark_cover_dis{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.big_left,.big_right,.zoom_img,.close{
+    display: none;
+}
+
+.darken_cover{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    float: left;
+}
+
+.darken{
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    width: 100px;
+    color: white;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.thumb-bar{
+    display: inline;
+    position: absolute;
+    background-color: rgb(224,19,19);
+    background: linear-gradient(315deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
+    min-height: min-content;
+    display: none;
+}
+
+.thumb-bar img{
+    display: inline;
+    position: relative;
+    min-height: 100px;
+    max-height: 100px;
+    float: left;
+    cursor: pointer;
+}
+
+#hi{
+    margin-top: 1000px;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(224,19,19,1);
+}
+
+@media screen and (min-width:700px){
+
+    h1{
+        font-size: 55px;
+    }
+
+    .thumb-bar{
+        display: inline;
+        position: absolute;
+        background-color: rgb(224,19,19);
+        background: linear-gradient(315deg, rgba(224,19,19,1) 0%, rgba(162,160,198,1) 50%, rgba(37,208,240,1) 100%); 
+        min-height: min-content;
+    }
+
+    .thumb-bar img{
+        display: inline;
+        position: relative;
+        min-height: 100px;
+        max-height: 100px;
+        float: left;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width:900px){
+
+    h1{
+        font-size: 60px;
+    }
+    
+    .big_left_dis,.big_right_dis,.close_dis{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        cursor: pointer;
+    }
+    
+    .big_left_dis{
+        top: 45%;
+        display: block;
+    }
+    
+    .big_right_dis{
+        top: 45%;
+        right: 0;
+        display: block;
+    }
+    
+    .close_dis{
+        height: 80px;
+        width: 80px;
+        top: 10px;
+        right: 20px;
+        display: block;
+    }
+
+    .zoom_bg_full{
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        user-select: none;
+        margin-bottom: 0;
+    }
+
+    .img_wrap{
+        border: none;
+        position: absolute;
+        top: 14%;
+        left: 28%;
+        width: 640px;
+        height: 480px;
+        border-radius: 50px;
+    }
+    
+    .img_wrap_dis{
+        box-sizing: content-box;
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 12%;
+        right: 12%;
+        border: 10px solid black;
+        border-radius: 60px;
+    }
+    
+    .zoom_img_full{
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 50px;
+        cursor: zoom-out;
+        
+    }
+    
+    .zoom_img{
+        display: none;
+    }
+
+    .left{
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon(1).svg") center / 100px 120px no-repeat;
+        animation: fade-out 0.5s  both;
+    }
+
+    .right{
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),url("Icons/iconfinder-icon.svg") center / 100px 120px no-repeat;
+        animation: fade-out 0.5s  both;
+    }
+    
+    .full-img {
+        left: 28%;
+        width: 640px;
+        height: 480px;
+        cursor: zoom-in;
+    }
+    
+    .displayed-img{
+        border: 2px solid black;
+        border-radius: 50px;
+        max-height: 480px;
+        min-height: 480px;
+    }
+
+    .full_img_bg:hover .left {
+        animation: fade-in 0.5s  both;
+    }
+    
+    .full_img_bg:hover .right {
+        animation: fade-in 0.5s  both;
+    }
+}

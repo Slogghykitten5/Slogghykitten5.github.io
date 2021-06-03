@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/jpg" href="icons/favicon.svg"/>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Firefox Survey Page</title>
+    </head>
+    <body>
+        <main>
+            <div class="title_div">
+                <h1 id="title">Firefox Survey Form</h1>
+                <p id="description">Thank you for taking the time to help us improve Firefox.</p>
+            </div>
+            <form id="survey-form" action="https://www.mozilla.org/en-US/firefox/new/" target="_blank">
+                <div class="input_div input_div_column">
+                    <label class="typing_label" for="name" id="name-label">Name</label>
+                    <input class="input typing" type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="input_div input_div_column">
+                    <label class="typing_label" for="email" id="email-label">Email</label>
+                    <input class="input typing" type="email" id="email" placeholder="your@email.com" required>
+                </div>
+                <div class="input_div input_div_column">
+                    <label class="typing_label" for="number" id="number-label">Age</label>
+                    <input class="input typing" type="number" id="number" min="0" max="125" placeholder="20">
+                </div>
+                <div class="input_div input_div_column">
+                    <label class="typing_label" for="dropdown">Which is your current browser?</label>
+                    <select id="dropdown" class="input typing">
+                        <option>Firefox 😃✨</option>
+                        <option>Google Chrome</option>
+                        <option>Microsoft-edge</option>
+                        <option>Opera</option>
+                        <option>DuckDuckGo</option>
+                        <option>Brave</option>
+                        <option>Samsung-Internet</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="question_div"><p>Would you recommend it?</p></div>
+                    <div class="input_div">
+                        <input type="radio" class="input larger" value="yes" id="yes" name="recommend">
+                        <label class="label" for="yes">Yes</label>
+                    </div>
+                    <div class="input_div">
+                        <input type="radio" class="input larger" value="maybe" id="yes" name="recommend">
+                        <label class="label" for="maybe">Maybe</label>
+                    </div>
+                    <div class="input_div">
+                        <input type="radio" class="input larger" value="not-sure" id="not-sure" name="recommend">
+                        <label class="label" for="not-sure">Not Sure</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="question_div">
+                        <p>Favourite Features (select all that apply)</p>                    
+                    </div>
+                    <div class="flex_wrap">
+                        <div class="input_div">
+                            <input type="checkbox" class="input larger" value="1" id="1">
+                            <label class="label" for="1">Sleek design</label>
+                        </div>
+                        <div class="input_div">
+                            <input type="checkbox" class="input larger" value="2" id="2">
+                            <label class="label" for="2">Inbuilt Screenshot</label>
+                        </div>
+                        <div class="input_div">
+                            <input type="checkbox" class="input larger" value="3" id="3">
+                            <label class="label" for="3">Reader mode</label>
+                        </div>
+                        <div class="input_div">
+                            <input type="checkbox" class="input larger" value="4" id="4">
+                            <label class="label" for="4">Large number of addons and features on both mobile and desktop apps</label>
+                        </div>
+                        <div class="input_div">
+                            <input type="checkbox" class="input larger" value="5" id="5">
+                            <label class="label" for="5">Containers</label>
+                        </div>
+                        <div class="input_div">
+                            <input type="checkbox" class="input larger" value="6" id="6">
+                            <label class="label" for="6">Awesome Privacy</label>
+                        </div>
+                        <div class="input_div">
+                            <input type="checkbox" class="input larger" value="7" id="7">
+                            <label class="label" for="7">Open Source</label>
+                        </div>
+                        <div class="input_div">
+                            <input type="checkbox" class="input larger" value="8" id="8">
+                            <label class="label" for="8">Passionate community</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input_div input_div_column">
+                    <label for="textarea" class="typing_label">Any comments or suggestions?</label>
+                    <textarea id="textarea" class="input typing textarea" placeholder="Enter suggestions here..."></textarea>
+                </div>
+                <div class="submit_div">
+                    <input class="input" type="submit" id="submit" value="Submit">
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

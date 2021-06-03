@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('font_files/RalewayThin-Light.eot');
+    src: url('font_files/RalewayThin-Light.eot?#iefix') format('embedded-opentype'),
+        url('font_files/RalewayThin-Light.woff2') format('woff2'),
+        url('font_files/RalewayThin-Light.woff') format('woff'),
+        url('font_files/RalewayThin-Light.ttf') format('truetype'),
+        url('font_files/RalewayThin-Light.svg#RalewayThin-Light') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

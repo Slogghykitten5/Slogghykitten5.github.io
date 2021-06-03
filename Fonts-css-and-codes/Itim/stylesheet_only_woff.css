@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Itim';
+    src: url('font_files/itim-regular-webfont.woff2') format('woff2'),
+        url('font_files/itim-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
