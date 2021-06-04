@@ -237,7 +237,6 @@ figcaption{
     width: 80%;
     margin: auto;
     margin-top: 30px;
-    margin-bottom: 50px;
     display: flex;
     gap: 20px;
 }
@@ -257,7 +256,7 @@ figcaption{
     margin: auto;
 }
 
-.check_more p .check_more span{
+.check_more p{
     color: white;
     text-align: center;
     font-family: 'Amatic SC',cursive;
