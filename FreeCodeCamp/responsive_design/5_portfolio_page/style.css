@@ -132,7 +132,7 @@ main > section{
     gap: 30px;
     overflow: auto;
     scroll-snap-type: x mandatory;
-    height: 90vh;
+    max-height: 100vh;
     overflow-y: hidden;
 }
 
