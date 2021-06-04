@@ -19,7 +19,7 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-padding: 70px;
+    scrollbar-color: var(--light_orange) var(--orange);
 }
 
 body{
@@ -108,6 +108,7 @@ main > section{
     position: relative;
     padding-right: 10px;
     padding-left: 10px;
+    padding-top: 75px;
 }
 
 .no-scroll {
@@ -132,10 +133,12 @@ main > section{
     gap: 30px;
     overflow: auto;
     scroll-snap-type: x mandatory;
+    height: 99vh;
+    overflow-y: hidden;
 }
 
 .project_section{
-    height: 100vh;
+    height: 100%;
     min-width: 100%;
     scroll-snap-align: center;
 }
@@ -153,12 +156,26 @@ h2{
     margin-top: 0px;
 }
 
-#contact{
-    background-color: var(--red);
+.scroll_plz_wrapper_sec_1{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 99%;
+}
+
+.scroll_plz_wrapper_sec_1 img{
+    min-height: 45px;
+    min-width:80px;
+    transform: rotateX(180deg);
+}
+
+.scroll_plz_wrapper_sec_1 p{
+    font-family: 'Amatic SC',cursive;
+    color: white;
+    font-size: 4vmax;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: black 2px 2px 0px;
 }
 
 a{
@@ -175,6 +192,7 @@ a{
     padding: 10px;
     scrollbar-color: var(--light_orange) var(--orange);
     scroll-snap-type: x mandatory;
+    height: 50%;
 }
 
 .project_wrapper > .project{
@@ -249,11 +267,17 @@ figcaption{
     display: flex;
 }
 
+.scroll_plz_wrapper img{
+    min-height: 45px;
+    min-width:80px;
+}
+
 .scroll_plz_wrapper p{
     font-family: 'Amatic SC',cursive;
     color: white;
     font-size: 4vmax;
     margin-top: 20px;
+    text-shadow: black 2px 2px 0px;
 }
 
 .controls_wrapper{
@@ -266,6 +290,10 @@ figcaption{
     margin-top: 30px;
     display: flex;
     gap: 20px;
+}
+
+.check_more_wrapper a{
+    flex-grow: 1;
 }
 
 .check_more{
@@ -290,9 +318,47 @@ figcaption{
     font-size: 2.5vmax;
 }
 
+#contact{
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 99%;
+}
+
+.contact_wrapper{
+    background-color: black;
+}
+
 @media screen and (min-width:600px) {
     .project{
         min-width: 50.5%;
+    }
+
+    #projects{
+        padding-top: 90px;
+    }
+
+    .scroll_plz_wrapper img{
+        margin-left: 30px;
+    }
+
+    .check_more img{
+        width: auto;
+        height: 50px;
+    }
+
+    .check_more p{
+        color: white;
+        text-align: center;
+        font-family: 'Amatic SC',cursive;
+        font-size: 3vmax;
+    }
+
+    .scroll_plz_wrapper p{
+        margin-left: 5px;
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
 }
 
@@ -326,8 +392,8 @@ figcaption{
 
     .control{
         background-color: var(--light_orange_2);
-        height: 75px;
-        width: 75px;
+        height: 4vmax;
+        width: 4vmax;
         margin: 10px;
     }
 
