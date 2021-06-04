@@ -134,6 +134,7 @@ main > section{
     scroll-snap-type: x mandatory;
     height: 99vh;
     overflow-y: hidden;
+    position: relative;
 }
 
 .project_section{
