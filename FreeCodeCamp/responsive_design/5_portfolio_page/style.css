@@ -132,9 +132,8 @@ main > section{
     gap: 30px;
     overflow: auto;
     scroll-snap-type: x mandatory;
-    height: 99vh;
+    height: 90vh;
     overflow-y: hidden;
-    position: relative;
 }
 
 .project_section{
