@@ -128,6 +128,21 @@ main > section{
 
 #projects{
     background-color: var(--orange);
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.project_section{
+    height: 100vh;
+    min-width: 100%;
+    scroll-snap-align: center;
+}
+
+.project_section.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h2{
