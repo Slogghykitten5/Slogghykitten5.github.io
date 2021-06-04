@@ -145,7 +145,7 @@ main > section{
 .project_section.content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
 }
 
 .project_section.header{
