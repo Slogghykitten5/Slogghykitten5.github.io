@@ -129,6 +129,7 @@ main > section{
 #projects{
     background-color: var(--orange);
     display: flex;
+    gap: 30px;
     overflow: auto;
     scroll-snap-type: x mandatory;
 }
@@ -242,6 +243,17 @@ figcaption{
 
 .project_link img:hover{
     transform: scale(1.2);
+}
+
+.scroll_plz_wrapper{
+    display: flex;
+}
+
+.scroll_plz_wrapper p{
+    font-family: 'Amatic SC',cursive;
+    color: white;
+    font-size: 4vmax;
+    margin-top: 20px;
 }
 
 .controls_wrapper{
