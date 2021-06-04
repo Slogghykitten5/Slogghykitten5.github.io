@@ -257,7 +257,7 @@ figcaption{
     margin: auto;
 }
 
-.check_more p{
+.check_more p .check_more span{
     color: white;
     text-align: center;
     font-family: 'Amatic SC',cursive;
