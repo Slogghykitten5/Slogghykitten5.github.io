@@ -196,7 +196,9 @@ a{
     margin-top: 80px;
     margin-bottom: 10px;
     overflow: auto;
-    padding: 10px;
+    padding:0px;
+    padding-top: 10px;
+    padding-bottom:10px;
     scrollbar-color: var(--light_orange) var(--orange);
     scroll-snap-type: x mandatory;
 }
