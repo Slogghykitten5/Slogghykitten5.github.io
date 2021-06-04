@@ -236,10 +236,10 @@ figcaption{
 .check_more_wrapper{
     width: 80%;
     margin: auto;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     display: flex;
     gap: 20px;
-    margin-top: 30px;
 }
 
 .check_more{
