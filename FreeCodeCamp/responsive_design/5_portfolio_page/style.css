@@ -168,15 +168,14 @@ h2{
 
 .scroll_plz_wrapper_sec_1{
     position: absolute;
-    bottom: 20px;
-    left: 10px;
+    bottom: 50px;
+    right: 10px;
     display: flex;
 }
 
 .scroll_plz_wrapper_sec_1 img{
     min-height: 45px;
     min-width:80px;
-    transform: rotateX(180deg);
 }
 
 .scroll_plz_wrapper_sec_1 p{
@@ -184,7 +183,8 @@ h2{
     color: white;
     font-size: 4vmax;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-bottom: 0px;
     text-shadow: black 2px 2px 0px;
 }
 
