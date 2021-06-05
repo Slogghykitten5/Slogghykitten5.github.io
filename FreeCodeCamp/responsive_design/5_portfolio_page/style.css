@@ -88,12 +88,14 @@ header nav ul li a{
     font-size: 7vmax;
     text-align: center;
     font-family: 'Pacifico', cursive;
+    margin-bottom: 20px;
 }
 
 .sec_1_content_wrapper p{
     font-size: 5vmax;
     text-align: center;
     font-family: 'Amatic SC',cursive;
+    margin-top: 0px;
 }
 
 main{
@@ -422,6 +424,17 @@ figcaption{
 }
 
 @media screen and (min-width:950px) {
+
+    .sec_1_content_wrapper h1{
+        font-size: 5vmax;
+        margin-bottom: 20px;
+    }
+
+    .sec_1_content_wrapper p{
+        font-size: 3vmax;
+        margin-top: 0px;
+    }
+
     .project{
         min-width: 33.1%;
         min-height: 300px;
