@@ -14,6 +14,7 @@
     --dark_red: hsl(19, 100%, 40%);
     --dark_orange:hsl(30, 88%, 41%);
     --light_orange_2:hsl(39, 85%, 55%);
+    --grey:hsl(0, 0%, 11%);
 }
 
 *{
@@ -305,23 +306,20 @@ figcaption{
     gap: 20px;
 }
 
-.check_more_wrapper a{
-    flex-grow: 1;
-}
-
 .check_more{
-    background-color:#1d1d1d;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    background-color:var(--grey);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     padding: 10px;
     border-radius: 20px;
+    transition: all 0.5s;
 }
 
 .check_more img{
     width: 50%;
     height: auto;
     margin: auto;
+    transition: all 0.5s;
 }
 
 .check_more p{
@@ -329,6 +327,7 @@ figcaption{
     text-align: center;
     font-family: 'Amatic SC',cursive;
     font-size: 2.5vmax;
+    transition: all 0.5s;
 }
 
 #contact{
@@ -339,17 +338,64 @@ figcaption{
     min-height: 100%;
 }
 
+.contacts_wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+}
+
 .contact_wrapper{
-    background-color: black;
+    background-color: var(--grey);
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.contact_wrapper:hover{
+    background-color: rgb(0, 0, 0);
+    justify-content: end;
+}
+
+.contact_wrapper:hover p{
+    color: black;
+    margin: 0px;
+    font-size: 0.1px;
+}
+
+.contact_wrapper:hover img{
+    transform: scale(1);
+}
+
+.contact_wrapper img{
+    height: 30px;
+    transition: all 0.5s;
+    flex-grow: 1;
+    max-height: 100%;
+}
+
+.contact_wrapper p{
+    color: white;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    transition: all 0.5s;
+    margin-bottom: 0px;
 }
 
 @media screen and (min-width:600px) {
-    .project{
-        min-width: 50.5%;
-    }
-
+    
     #projects{
         padding-top: 90px;
+    }
+
+    .project{
+        min-width: 50.5%;
     }
 
     .scroll_plz_wrapper img{
@@ -378,6 +424,7 @@ figcaption{
 @media screen and (min-width:950px) {
     .project{
         min-width: 33.1%;
+        min-height: 300px;
     }
 
     figcaption{
@@ -391,6 +438,26 @@ figcaption{
 
     .scroll_plz_wrapper img{
         margin-left: 0px;
+    }
+
+    .scroll_plz_wrapper p{
+        font-size: 3vmax;
+    }
+
+    .check_more{
+        flex-direction: initial;
+    }
+
+    .check_more img{
+        width: auto;
+        height: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .check_more p{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -440,18 +507,19 @@ figcaption{
         background-color: var(--light_red);
     }
 
-    .check_more span{
-        opacity: 0%;
-        margin-left: 5px;
-        font-size: 3.5vmax;
-        transition: all 0.5s;
+    .check_more.codepen:hover{
+        background-color: black;
     }
 
-    .check_more.codepen:hover span{
-        opacity: 100%;
+    .check_more.codepen:hover p{
+        font-size: 0.001px;
     }
 
-    .check_more.github:hover span{
-        opacity: 100%;
+    .check_more.github:hover{
+        background-color: black;
+    }
+
+    .check_more.codepen:hover{
+        background-color: black;
     }
 }
