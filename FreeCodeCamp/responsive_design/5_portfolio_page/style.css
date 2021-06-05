@@ -33,7 +33,7 @@ img{
 }
 
 header{
-    background-color:var(--peacock);
+    background: linear-gradient(to bottom,var(--peacock)90%, rgba(255,255,255,0));
     position: fixed;
     top: 0px;
     left: 0px;
@@ -74,13 +74,13 @@ nav ul li{
 header nav ul li a{
     display: inline-block;
     height: 100%;
-    background-color: var(--red);
+    background-color: var(--blue);
     padding: 10px;
     color: white;
     font-family: 'Amatic SC',cursive;
     display: flex;
     justify-content: center;
-    font-size: 4vmax;
+    font-size: 26px;
 }
 
 .sec_1_content_wrapper h1{
@@ -108,6 +108,7 @@ main > section{
     position: relative;
     padding-right: 10px;
     padding-left: 10px;
+    padding-top: 75px;
 }
 
 .no-scroll {
@@ -134,7 +135,6 @@ main > section{
     scroll-snap-type: x mandatory;
     max-height: 99vh;
     overflow-y: hidden;
-    padding-top: 75px;
     max-height: 100%;
 }
 
