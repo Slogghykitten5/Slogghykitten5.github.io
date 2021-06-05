@@ -135,6 +135,7 @@ main > section{
     max-height: 99vh;
     overflow-y: hidden;
     padding-top: 75px;
+    max-height: 100%;
 }
 
 .project_section{
@@ -335,7 +336,7 @@ figcaption{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 99%;
+    min-height: 100%;
 }
 
 .contact_wrapper{
