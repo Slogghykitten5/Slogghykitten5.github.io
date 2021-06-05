@@ -3,15 +3,15 @@
 
 :root{
     --blue: hsl(198, 61%, 39%);
-    --peacock:hsl(162, 43%, 46%);
-    --yellow:hsl(42, 93%, 64%);
+    --peacock:rgb(255,215,0);
+    --yellow:rgb(255,179,71);
     --dark_yellow:hsl(39, 100%, 55%);
     --light_yellow:hsl(42, 100%, 73%);
     --orange: hsl(21, 89%, 56%);
     --light_orange:hsl(21, 100%, 81%);
-    --red: hsl(359, 94%, 62%);
-    --light_red: hsl(359, 93%, 72%);
-    --dark_red: hsl(359, 100%, 50%);
+    --red: hsl(19, 100%, 50%);
+    --light_red: hsl(19, 100%, 70%);
+    --dark_red: hsl(19, 100%, 40%);
     --dark_orange:hsl(30, 88%, 41%);
     --light_orange_2:hsl(39, 85%, 55%);
 }
@@ -33,7 +33,7 @@ img{
 }
 
 header{
-    background: linear-gradient(to bottom,var(--peacock)90%, rgba(255,255,255,0));
+    background: var(--peacock);
     position: fixed;
     top: 0px;
     left: 0px;
@@ -382,6 +382,15 @@ figcaption{
 
     figcaption{
         font-size: 2.5vmax;
+    }
+
+    .scroll_plz_wrapper{
+        width: 85%;
+        margin: auto;
+    }
+
+    .scroll_plz_wrapper img{
+        margin-left: 0px;
     }
 }
 
