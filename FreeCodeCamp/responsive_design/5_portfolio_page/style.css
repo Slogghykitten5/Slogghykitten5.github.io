@@ -164,7 +164,6 @@ h2{
     font-size: 5vmax;
     text-align: center;
     font-family: 'Pacifico',cursive;
-    margin-top: 0px;
 }
 
 .scroll_plz_wrapper_sec_1{
@@ -302,17 +301,19 @@ figcaption{
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     gap: 20px;
 }
 
 .check_more{
     background-color:var(--grey);
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     border-radius: 20px;
     transition: all 0.5s;
+    min-height: 100%;
 }
 
 .check_more img{
@@ -334,7 +335,6 @@ figcaption{
     background-color: var(--red);
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100%;
 }
 
@@ -519,7 +519,7 @@ figcaption{
         background-color: black;
     }
 
-    .check_more.codepen:hover{
-        background-color: black;
+    .check_more.github:hover p{
+        font-size: 0.001px;
     }
 }
