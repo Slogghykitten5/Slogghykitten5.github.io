@@ -331,6 +331,7 @@ figcaption{
     font-family: 'Amatic SC',cursive;
     font-size: 2.5vmax;
     transition: all 0.5s;
+    flex-grow: 1;
 }
 
 #contact{
@@ -463,7 +464,7 @@ figcaption{
 
     .check_more img{
         width: auto;
-        height: 100px;
+        height: 50px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -471,6 +472,7 @@ figcaption{
     .check_more p{
         margin-top: 10px;
         margin-bottom: 10px;
+        font-size: 31px;
     }
 }
 
@@ -526,6 +528,7 @@ figcaption{
 
     .check_more.codepen:hover p{
         font-size: 0.001px;
+        flex-grow: initial;
     }
 
     .check_more.github:hover{
@@ -534,5 +537,6 @@ figcaption{
 
     .check_more.github:hover p{
         font-size: 0.001px;
+        flex-grow: initial;
     }
 }
