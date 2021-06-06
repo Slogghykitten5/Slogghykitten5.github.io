@@ -9,9 +9,9 @@
     --light_yellow:hsl(42, 100%, 73%);
     --orange: hsl(21, 95%, 45%);
     --light_orange:hsl(21, 100%, 81%);
-    --red: hsl(19, 100%, 50%);
-    --light_red: hsl(19, 100%, 70%);
-    --dark_red: hsl(19, 100%, 30%);
+    --red: hsl(0, 100%, 63%);
+    --light_red: hsl(355, 68%, 67%);
+    --dark_red: hsl(0, 100%, 27%);
     --dark_orange:hsl(30, 88%, 31%);
     --light_orange_2:hsl(39, 85%, 55%);
     --grey:hsl(0, 0%, 11%);
@@ -318,6 +318,13 @@ figcaption{
     min-height: 100%;
 }
 
+.check_more_img_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
 .check_more img{
     width: 50%;
     height: auto;
@@ -391,10 +398,6 @@ figcaption{
     margin-bottom: 0px;
 }
 
-*:focus {
-  box-shadow: rgb(255, 255, 255) 0px 0px 20px;
-}
-
 @media screen and (min-width:600px) {
     
     #projects{
@@ -464,7 +467,6 @@ figcaption{
 
     .check_more{
         flex-direction: initial;
-        padding-left: 20px;
     }
 
     .check_more img{
@@ -478,6 +480,7 @@ figcaption{
     .check_more p{
         margin-top: 10px;
         margin-bottom: 10px;
+        margin-left: 20px;
         font-size: 31px;
         text-align: left;
     }
@@ -506,6 +509,10 @@ figcaption{
         height: 4vmax;
         width: 4vmax;
         margin: 10px;
+    }
+
+    .control a{
+        display: block;
     }
 
     .control img{

@@ -17,8 +17,8 @@
             </ul>
         </nav>
     </header>
-    <main id="main" class="no-scroll">
-        <section id="welcome-section">
+    <main id="main" class="no-scroll" tabindex="-1">
+        <section id="welcome-section" tabindex="-1">
             <div class="sec_1_content_wrapper">
                 <h1>Hello, I am Slogghykitten5</h1>
                 <p>An aspiring full-stack developer</p>
@@ -26,14 +26,14 @@
                 <div class="controls_wrapper">
                     <div class="controls part_1">
                         <div class="control part_1_c">
-                            <a href="#projects">
-                                <img src="icons/arrow_down.svg" alt="Go Down">
+                            <a href="#projects" aria-label="Go to Projects Section">
+                                <img src="icons/arrow_down.svg" alt="">
                             </a>
                         </div>
                     </div>
                 </div>
         </section>
-        <section id="projects">
+        <section id="projects" tabindex="-1">
             <div class="project_section header">
                 <h2>Portfolio Items</h2>
                 <div class="scroll_plz_wrapper_sec_1">
@@ -44,7 +44,7 @@
             <div class="project_section content">
                 <div class="project_wrapper">
                     <div class="project">
-                        <a href="../1_tribute_page/" target="_blank" class="project_link">
+                        <a href="../1_tribute_page/" target="_blank" class="project_link" aria-label="Link To Neil Armstrong Tribute Page">
                         <figure>
                             <div class="preview_wrapper">
                                 <img src="previews/tribute_page.jpg" alt="Link To Neil Armstrong Tribute Page">
@@ -54,7 +54,7 @@
                         </a>
                     </div>
                     <div class="project">
-                        <a href="../2_survey_form/" target="_blank" class="project_link">
+                        <a href="../2_survey_form/" target="_blank" class="project_link" aria-label="Link To Firefox Survey Form">
                         <figure>
                             <div class="preview_wrapper">
                                 <img src="previews/survey_form.jpg" alt="Link To Firefox Survey Form">
@@ -141,13 +141,17 @@
                 <div class="check_more_wrapper">
                     <a href="https://github.com/Slogghykitten5" target="_blank">
                         <div class="check_more github">
-                            <img src="icons/github.svg" alt="Github Logo">
+                            <div class="check_more_img_wrapper">
+                                <img src="icons/github.svg" alt="Github Logo">
+                            </div>
                             <p>Check out more on Github<span>⇒</span></p>
                         </div>
                     </a>
                     <a href="https://codepen.io/Slogghy_kitten5/" target="_blank">
                         <div class="check_more codepen">
-                            <img src="icons/codepenlogo.svg" alt="Codepen Logo">
+                            <div class="check_more_img_wrapper">
+                                <img src="icons/codepenlogo.svg" alt="Codepen Logo">
+                            </div>
                             <p>Check out more on Codepen<span>⇒</span></p>
                         </div>
                     </a>
@@ -156,19 +160,19 @@
             <div class="controls_wrapper">
                 <div class="controls part_2">
                     <div class="control part_2_c">
-                        <a href="#welcome-section">
-                            <img src="icons/arrow_up.svg" alt="Go Up">
+                        <a href="#welcome-section" aria-label="Go to about section">
+                            <img src="icons/arrow_up.svg" alt="">
                         </a>
                     </div>
-                    <div class="control part_2_c">
+                    <div class="control part_2_c" aria-label="Go to contacts section">
                         <a href="#contact">
-                            <img src="icons/arrow_down.svg" alt="Go Down">
+                            <img src="icons/arrow_down.svg" alt="">
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" tabindex="-1">
             <div class="sec_3_content_wrapper">
                 <h2>Contact Me on...</h2>
                 <div class="contacts_wrapper">
@@ -213,8 +217,8 @@
             <div class="controls_wrapper">
                 <div class="controls part_3">
                     <div class="control part_3_c">
-                        <a href="#projects">
-                            <img src="icons/arrow_up.svg" alt="Go Up">
+                        <a href="#projects" aria-label="Go to projects section">
+                            <img src="icons/arrow_up.svg" alt="">
                         </a>
                     </div>
                 </div>
