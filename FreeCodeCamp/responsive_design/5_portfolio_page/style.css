@@ -7,12 +7,12 @@
     --yellow:rgb(255,179,71);
     --dark_yellow:hsl(39, 100%, 55%);
     --light_yellow:hsl(42, 100%, 73%);
-    --orange: hsl(21, 89%, 56%);
+    --orange: hsl(21, 95%, 45%);
     --light_orange:hsl(21, 100%, 81%);
     --red: hsl(19, 100%, 50%);
     --light_red: hsl(19, 100%, 70%);
-    --dark_red: hsl(19, 100%, 40%);
-    --dark_orange:hsl(30, 88%, 41%);
+    --dark_red: hsl(19, 100%, 30%);
+    --dark_orange:hsl(30, 88%, 31%);
     --light_orange_2:hsl(39, 85%, 55%);
     --grey:hsl(0, 0%, 11%);
 }
