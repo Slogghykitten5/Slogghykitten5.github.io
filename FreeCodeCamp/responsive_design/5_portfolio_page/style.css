@@ -391,6 +391,10 @@ figcaption{
     margin-bottom: 0px;
 }
 
+*:focus {
+  box-shadow: rgb(255, 255, 255) 0px 0px 20px;
+}
+
 @media screen and (min-width:600px) {
     
     #projects{
@@ -460,19 +464,22 @@ figcaption{
 
     .check_more{
         flex-direction: initial;
+        padding-left: 20px;
     }
 
     .check_more img{
         width: auto;
-        height: 50px;
+        min-height: 50px;
         margin-top: 10px;
         margin-bottom: 10px;
+        flex-basis: 100px;
     }
 
     .check_more p{
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 31px;
+        text-align: left;
     }
 }
 
@@ -526,6 +533,10 @@ figcaption{
         background-color: black;
     }
 
+    .check_more.codepen:hover img{
+        transform: scale(1.5);
+    }
+
     .check_more.codepen:hover p{
         font-size: 0.001px;
         flex-grow: initial;
@@ -538,5 +549,9 @@ figcaption{
     .check_more.github:hover p{
         font-size: 0.001px;
         flex-grow: initial;
+    }
+
+    .check_more.github:hover img{
+        transform: scale(1.5);
     }
 }
