@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5mm"
+   height="8.7676716mm"
+   viewBox="0 0 5 8.7676716"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="favicon.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="26.458332"
+       y="73.327377"
+       width="159.50595"
+       height="108.10119"
+       id="rect18" />
+    <rect
+       x="12.095238"
+       y="59.720238"
+       width="187.4762"
+       height="110.36905"
+       id="rect12" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="43.107302"
+     inkscape:cy="75.695473"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-26.638908,-75.208876)">
+    <text
+       xml:space="preserve"
+       id="text10"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Amatic SC';-inkscape-font-specification:'Amatic SC';white-space:pre;shape-inside:url(#rect12);fill:#000000;fill-opacity:1;stroke:none;" />
+    <g
+       aria-label="A"
+       id="text16"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Amatic SC';-inkscape-font-specification:'Amatic SC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect18);fill:#ffffff;fill-opacity:1;stroke:none"
+       transform="matrix(1.724242,0,0,1.1001908,-19.293013,-7.5352414)">
+      <path
+         d="m 29.189476,83.178105 q -0.169333,0 -0.254,-0.0635 -0.07408,-0.0635 -0.07408,-0.211666 v -1.386412 q -0.137583,-0.09525 -0.518581,-0.169333 -0.380999,-0.07408 -0.719665,-0.09525 -0.116416,0.222249 -0.169332,0.539748 l -0.04233,0.211666 q -0.01058,0.07408 -0.0635,0.328082 -0.05292,0.253999 -0.116417,0.444499 -0.0635,0.179916 -0.126999,0.285749 -0.402166,0 -0.465666,-0.211666 0.116417,-0.169333 0.264583,-0.99483 l 0.349249,-1.936744 q 0.232832,-1.375829 0.423332,-2.349493 0.201083,-0.973663 0.423332,-1.629828 0.243416,-0.730247 0.465665,-0.730247 0.222249,0 0.338666,0.08467 0,0.423332 0.201082,2.042577 0.211666,1.587495 0.211666,2.169576 0,0.560915 0.116417,1.608662 0.105833,1.068913 0.105833,1.703911 0,0.359832 -0.349249,0.359832 z m -0.550332,-2.275409 q 0.08467,0 0.211666,-0.03175 -0.03175,-0.465665 -0.105833,-1.15358 -0.243416,-2.391825 -0.243416,-2.931574 v -0.08467 q -0.105833,0.105833 -0.296332,0.96308 -0.179916,0.846664 -0.338666,1.820328 -0.158749,0.973663 -0.169333,1.291162 0.444499,0.127 0.941914,0.127 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:'Amatic SC';-inkscape-font-specification:'Amatic SC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff"
+         id="path22" />
+    </g>
+  </g>
+</svg>
