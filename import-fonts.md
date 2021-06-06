@@ -92,7 +92,7 @@ font-family: 'Pacifico', cursive;
 
 ### Google Fonts
 
-* Url - ` @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');`
+* Url - `@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');`
 
 
 ## <a id="raleway-thin"></a>[Raleway Thin](#raleway-thin)

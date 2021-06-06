@@ -23,6 +23,10 @@
     scrollbar-color: var(--light_orange) var(--orange);
 }
 
+*:focus{
+    box-shadow: white 0px 0xp 20px;
+}
+
 body{
     margin: 0px;
     height: 100%;
@@ -576,5 +580,17 @@ figcaption{
 
     .check_more.github:hover img{
         transform: scale(1.5);
+    }
+}
+
+@media screen and (max-height:350px) {
+    #project{
+    overflow-y:auto;
+    min-height:max-content;
+    max-height:100vh;
+    }
+
+    .scroll_plz_wrapper_sec_1{
+        bottom: 50px;
     }
 }
