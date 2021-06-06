@@ -3,9 +3,9 @@
 
 :root{
     --blue: hsl(198, 61%, 39%);
-    --peacock:rgb(255,215,0);
-    --yellow:rgb(255,179,71);
-    --dark_yellow:hsl(39, 100%, 55%);
+    --header_color:rgb(255,215,0);
+    --yellow:hsl(35, 100%, 64%);
+    --dark_yellow:hsl(35, 100%, 54%);
     --light_yellow:hsl(42, 100%, 73%);
     --orange: hsl(21, 95%, 45%);
     --light_orange:hsl(21, 100%, 81%);
@@ -34,7 +34,7 @@ img{
 }
 
 header{
-    background: var(--peacock);
+    background: var(--header_color);
     position: fixed;
     top: 0px;
     left: 0px;
