@@ -447,9 +447,13 @@ figcaption{
         margin-top: 0px;
     }
 
+    .project_wrapper{
+        max-height:40%;
+    }
+
     .project{
         min-width: 33.1%;
-        min-height: 300px;
+        min-height: 250px;
     }
 
     figcaption{
