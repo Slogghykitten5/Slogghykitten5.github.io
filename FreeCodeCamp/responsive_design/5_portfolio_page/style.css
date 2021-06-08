@@ -48,15 +48,6 @@ header{
     display: flex;
 }
 
-.logo_wrapper{
-    display: flex;
-}
-
-.logo_wrapper p{
-    font-size: 2rem;
-    margin: 0px;
-}
-
 nav{
     height: max-content;
     flex-grow: 1;
@@ -212,7 +203,7 @@ a{
     scroll-snap-type: x mandatory;
 }
 
-.project_wrapper > .project{
+.project_wrapper > .project-tile{
     scroll-snap-align: start;
 }
 
@@ -237,7 +228,7 @@ a{
     background: center / contain no-repeat url("../../../MDN/gallery-start/Icons/arrow-right-01-256.webp");
 }
 
-.project{
+.project-tile{
     background-color:var(--blue);
     border-radius: 20px;
     border: 10px solid rgb(0,0,0);
@@ -408,7 +399,7 @@ figcaption{
         padding-top: 90px;
     }
 
-    .project{
+    .project-tile{
         min-width: 50.5%;
     }
 
@@ -451,7 +442,7 @@ figcaption{
         max-height:40%;
     }
 
-    .project{
+    .project-tile{
         min-width: 33.1%;
         min-height: 250px;
     }
