@@ -77,7 +77,9 @@ header nav ul li a{
     font-family: 'Amatic SC',cursive;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 26px;
+    transition: all 0.5s;
 }
 
 .sec_1_content_wrapper h1{
@@ -598,6 +600,10 @@ figcaption{
 
     .check_more.github:hover img{
         transform: scale(1.5);
+    }
+
+    nav a:hover{
+        box-shadow: var(--blue) 5px 5px 10px;
     }
 }
 
