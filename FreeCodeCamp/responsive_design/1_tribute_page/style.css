@@ -56,6 +56,8 @@ body{
     padding:0px;
     text-align: center;
     margin: 0px;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 .star{
@@ -300,7 +302,7 @@ hr{
     top:65%;
 }
 
-a[target*="_blank"]{
+a[href*="https"]{
     background-image: url("../1_tribute_page/icons/external-link-52.png");
     background-position: right;
     background-size: contain;
@@ -324,7 +326,7 @@ a[target*="_blank"]{
     z-index: 1;
 }
 
-.wiki{
+.wiki {
     color: white;
     font-size: larger;
     max-width: max-content;

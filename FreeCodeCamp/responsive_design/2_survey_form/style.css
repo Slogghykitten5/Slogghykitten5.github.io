@@ -7,6 +7,7 @@
 
 body{
     margin:0px;
+    position: relative;
 }
 
 main{
@@ -115,4 +116,24 @@ input[type=number] {
 input[type=submit]{
     margin: 20px;
     padding: 20px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer p{
+    margin: 0px;
+    font-size: 20px;
+    color: white;
+    width: max-content;
+    margin: auto;
+}
+
+footer a{
+    color:white
 }

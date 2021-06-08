@@ -68,6 +68,7 @@ body{
     margin: 0%;
     max-width: 100%;
     background-color: var(--c_1_light);
+    position: relative;
 }
 
 header{
@@ -330,6 +331,26 @@ input[type=submit]{
 
 input[type=submit]:hover , input[type=submit]:focus{
     animation: color_change 0.5s linear 0s 1 forwards;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer p{
+    margin: 0px;
+    font-size: 20px;
+    color: white;
+    width: max-content;
+    margin: auto;
+}
+
+footer a{
+    color:white
 }
 
 @media screen and (max-width:894px) {

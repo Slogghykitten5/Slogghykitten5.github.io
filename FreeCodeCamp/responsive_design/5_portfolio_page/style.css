@@ -31,6 +31,7 @@ body{
     margin: 0px;
     height: 100%;
     overflow-x: hidden;
+    position: relative;
 }
 
 img{
@@ -341,6 +342,7 @@ figcaption{
     display: flex;
     justify-content: center;
     min-height: 100%;
+    position: relative;
 }
 
 .contacts_wrapper{
@@ -391,6 +393,27 @@ figcaption{
     font-size: 20px;
     transition: all 0.5s;
     margin-bottom: 0px;
+}
+
+.check_repo_div{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.check_repo_div p{
+    margin: 0px;
+    font-size: 20px;
+    color: white;
+    width: max-content;
+    margin: auto;
+}
+
+.check_repo_div a{
+    color:white;
+    text-decoration: underline;
 }
 
 @media screen and (min-width:600px) {
