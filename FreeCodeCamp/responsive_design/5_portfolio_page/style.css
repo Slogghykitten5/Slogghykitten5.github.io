@@ -30,6 +30,7 @@
 body{
     margin: 0px;
     height: 100%;
+    width: max-content;
     overflow-x: hidden;
     max-width: max-content;
 }
