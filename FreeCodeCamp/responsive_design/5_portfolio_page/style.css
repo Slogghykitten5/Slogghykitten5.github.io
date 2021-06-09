@@ -135,7 +135,6 @@ main > section{
     scroll-snap-type: x mandatory;
     max-height: 99vh;
     overflow-y: hidden;
-    max-height: 100%;
 }
 
 .project_section{
