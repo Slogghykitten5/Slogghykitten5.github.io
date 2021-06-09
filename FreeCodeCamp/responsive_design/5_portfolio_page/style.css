@@ -31,6 +31,7 @@ body{
     margin: 0px;
     height: 100%;
     overflow-x: hidden;
+    max-width: max-content;
 }
 
 img{
@@ -99,6 +100,7 @@ main{
     overflow: auto;
     scroll-snap-type: y mandatory;
     height: 100vh;
+    min-width: 100%;
 }
 
 main > section{
