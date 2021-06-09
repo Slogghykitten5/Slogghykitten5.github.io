@@ -27,10 +27,14 @@
     box-shadow: white 0px 0xp 20px;
 }
 
+html{
+    background-color: green;
+}
+
 body{
+    background-color: hotpink;
     margin: 0px;
     height: 100%;
-    overflow-x: hidden;
 }
 
 img{
@@ -99,7 +103,6 @@ main{
     overflow: auto;
     scroll-snap-type: y mandatory;
     height: 100vh;
-    min-width: 100%;
 }
 
 main > section{
@@ -408,8 +411,7 @@ figcaption{
     margin: 0px;
     font-size: 20px;
     color: white;
-    width: max-content;
-    margin: auto;
+    text-align: center;
 }
 
 .check_repo_div a{
