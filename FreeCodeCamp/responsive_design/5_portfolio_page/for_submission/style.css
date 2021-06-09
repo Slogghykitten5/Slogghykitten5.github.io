@@ -1,5 +1,5 @@
-@import url(../../../Fonts-css-and-codes/Amatic-SC/stylesheet_only_woff.css);
-@import url(../../../Fonts-css-and-codes/Pacifico/stylesheet_only_woff.css);
+@import url(../../../../Fonts-css-and-codes/Amatic-SC/stylesheet_only_woff.css);
+@import url(../../../../Fonts-css-and-codes/Pacifico/stylesheet_only_woff.css);
 
 :root{
     --blue: hsl(198, 61%, 39%);
@@ -31,6 +31,7 @@ body{
     margin: 0px;
     height: 100%;
     overflow-x: hidden;
+    background-color: var(--red);
 }
 
 img{
@@ -38,14 +39,13 @@ img{
 }
 
 header{
-    background: var(--header_color);
-    position: absolute;
-    top: 0px;
-    left: 0px;
     width: 100%;
-    z-index: 1;
-    padding: 10px;
     display: flex;
+    position: sticky;
+    top:-1px;
+    z-index: 10;
+    background: var(--header_color);
+    padding: 10px;
 }
 
 nav{
@@ -67,7 +67,7 @@ nav ul li{
     flex-grow: 1;
 }
 
-header nav ul li a{
+nav ul li a{ 
     display: inline-block;
     height: 100%;
     background-color: var(--blue);
@@ -99,10 +99,12 @@ main{
     overflow: auto;
     scroll-snap-type: y mandatory;
     height: 100vh;
+    position: relative;
+    top:-73px;
 }
 
 main > section{
-    scroll-snap-align: start;
+    scroll-snap-align: end;
     min-height: 100vh;
     padding: 20px;
     position: relative;
@@ -135,7 +137,6 @@ main > section{
     scroll-snap-type: x mandatory;
     max-height: 99vh;
     overflow-y: hidden;
-    max-height: 100%;
 }
 
 .project_section{
@@ -223,11 +224,11 @@ a{
 }
 
 ::-webkit-scrollbar-button:horizontal:decrement {
-    background: center / contain no-repeat url("../../../MDN/gallery-start/Icons/arrow-left-01-256.webp");
+    background: center / contain no-repeat url("../../../../MDN/gallery-start/Icons/arrow-left-01-256.webp");
 }
 
 ::-webkit-scrollbar-button:horizontal:increment {
-    background: center / contain no-repeat url("../../../MDN/gallery-start/Icons/arrow-right-01-256.webp");
+    background: center / contain no-repeat url("../../../../MDN/gallery-start/Icons/arrow-right-01-256.webp");
 }
 
 .project-tile{
@@ -302,6 +303,7 @@ figcaption{
     margin-bottom: 10px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
     gap: 20px;
 }
 
