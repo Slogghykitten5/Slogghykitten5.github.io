@@ -406,12 +406,11 @@ figcaption{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.check_repo_div p{
+.check_repo_div .check_repo{
     margin: 0px;
     font-size: 20px;
     color: white;
-    width: max-content;
-    margin: auto;
+    text-align: center;
 }
 
 .check_repo_div a{
