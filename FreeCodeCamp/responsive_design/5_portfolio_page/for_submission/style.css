@@ -543,14 +543,14 @@ figcaption{
     }
 
     .go_up{
-        background: url('icons/arrow_up.svg');
+        background: url('../icons/arrow_up.svg');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
 
     .go_down{
-        background: url('icons/arrow_down.svg');
+        background: url('../icons/arrow_down.svg');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
