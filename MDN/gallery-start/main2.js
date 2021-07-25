@@ -26,7 +26,7 @@ let src = displayedImage.getAttribute('src')
 
 let imgSrc = ["images/balloon-sq1.jpg","images/balloon-sq2.jpg","images/balloon-sq3.jpg","images/balloon-sq4.jpg","images/balloon-sq5.jpg","images/balloon-sq6.jpg","images/leopardskin.jpg","images/pic1.jpg","images/pic2.jpg","images/pic3.jpg","images/pic4.jpg","images/pic5.jpg"];
 
-function f_check(){
+function change_favicon(){
     src = displayedImage.getAttribute('src');
     favicon.setAttribute("href", src);
 }
@@ -43,11 +43,10 @@ function load_thumb_img() {
         thumbBar.appendChild(newImage);
     }
 }
-
    
 load_thumb_img()
 
-function check(){
+function check_image_border(){
     src = displayedImage.getAttribute('src');
     for(let i = 0;i<imgSrc.length;i++){
         need_img = thumbBar.querySelector('.img_'+i);
@@ -59,33 +58,43 @@ function check(){
         }
     }
 
-    f_check()
+    change_favicon()
 }
 
-check()
+check_image_border()
 
 thumbBar.onclick = function(e){
     s = e.target.getAttribute('src');
     displayedImage.setAttribute('src', s);
-    check();
-    f_check()
+    check_image_border();
+    change_favicon()
 }
     
 
 
 /* Wiring up the Darken/Lighten button */
-let overlay = document.querySelector('.dark_cover')
+let overlay = document.querySelector('.dark_cover');
 btn.onclick = function(){
     if(btn.textContent==="Darken"){
-        btn.textContent = "Lighten";
-        overlay.className = 'dark_cover_dis'
-        overlay.style.animation = 'fade-in .5s both'
+        darken()
     }
     else{
-        btn.textContent = "Darken";
-        overlay.style.animation = 'fade-out 0.5s ease-out both'
+        lighten()
     }
 }
+
+function darken() {
+    btn.textContent = "Lighten";
+    overlay.className = 'dark_cover_dis'
+    overlay.style.animation = 'fade-in .5s both'
+}
+
+function lighten() {
+    btn.textContent = "Darken";
+    overlay.style.animation = 'fade-out 0.5s ease-out both'    
+}
+
+/*Done wiring up the Darken/Lighten Button*/
 
 
 const but_left = document.querySelector('.left');
@@ -117,8 +126,8 @@ function display_check_right() {
                 continue;
             }
         }
-        check();
-        f_check();
+        check_image_border();
+        change_favicon();
     };
 }
 
@@ -143,8 +152,8 @@ function display_check_left() {
                 continue;
             }
         }
-        check();
-        f_check();
+        check_image_border();
+        change_favicon();
     };
 }
 
