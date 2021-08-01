@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+</head>
+
+<body>
+  <!-- the script with tests (describe, it...) -->
+  <script src="test.js"></script>
+
+  <!-- the element with id="mocha" will contain test results -->
+  <div id="mocha"></div>
+
+  <!-- Write function and run tests! -->
+  <script>
+    function pow(x, n) {
+        return x**n;
+    }
+    mocha.run();
+  </script>
+</body>
+
+</html>
