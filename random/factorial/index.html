@@ -21,6 +21,8 @@
       }
 
     </style>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Find factorial</title>
 </head>
 <body onclick="factorial()">
@@ -60,6 +62,12 @@
     let another = confirm('Find factorial of another number?');
 
     if(another) factorial();
+
+    Swal.fire(
+  'The Internet?',
+  'That thing is still around?',
+  'question'
+)
   }
 
 </script>
