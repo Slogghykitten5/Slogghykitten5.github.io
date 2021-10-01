@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:100%; width:100%;">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find factorial</title>
 </head>
-<body>
-    <h1>OPEN CONSOLE - ctrl + shift + k</h1>
+<body onclick="factorial()" style="height:100%; width:100%; display: flex; margin: 0px;">
+    <h1 style="max-width: 90%; margin: auto;">Click anywhere to find factorial</h1>
 <script>
-    console.log('Type "factorial()" for finding factorial')
-    function factorial(num = prompt('Give a number to find factorial..', '')) {
-  if (num == undefined) {
-    console.log('You exited... ');
-    return
+
+  console.log('Type "factorial()" for finding factorial');
+
+  function factorial(num = prompt('Give a number to find factorial..', '')) {
+    if (num == undefined) {
+      alert('You exited... ');
+      return
+    }
+    num = parseInt(num);
+
+    if (isNaN(num)) {
+      alert('Put a number... ');
+      factorial()
+      return
+    } 
+
+    if (num < 0) {
+      num *= -1;
+      alert(`You put a negetive number but negetive numbers don't have a factorial so I'll continue with it's positive counterpart... ${num}`)
+    }
+
+    let result = 1;
+
+    for(i = 1; i <= num; i++){
+      result *= i;
+    }
+
+    alert(result);
+
+    let another = confirm('Find factorial of another number?');
+
+    if(another) factorial();
   }
-  num = parseInt(num);
 
-  if (isNaN(num)) {
-    console.log('Put a number... ');
-    return
-  } 
+  factorial()
 
-  if (num < 0) {
-    num *= -1;
-    console.log(`You put a negetive number but negetive numbers don't have a factorial so I'll continue with it's positive counterpart... ${num}`)
-  }
-
-  let result = 1;
-
-  for(i = 1; i <= num; i++){
-    result *= i;
-  }
-
-  console.log(result);
-}
-
-factorial()
 </script>
 </body>
 </html>
