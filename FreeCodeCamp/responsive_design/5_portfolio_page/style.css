@@ -27,6 +27,11 @@
     box-shadow: white 0px 0xp 20px;
 }
 
+::selection{
+    color: white;
+    background-color: black;
+}
+
 body{
     margin: 0px;
     height: 100%;
