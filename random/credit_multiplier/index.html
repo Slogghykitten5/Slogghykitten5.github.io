@@ -5,21 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		body {
-			height: 100%;
-			width: 100%;
-			display: flex;
-			margin: 0px;
-			cursor: pointer;
-		}
-
-		h1 {
-			max-width: 80%;
-			margin: auto;
-			text-align: center;
-		}
-	</style>
+    <link rel="stylesheet" href="style.css">
 	<title>Find Credit Multiplier</title>
 </head>
 
@@ -27,129 +13,7 @@
 
 	<h1>Click anywhere to find Credit Multiplier</h1>
 
-    <script>
-        console.log("Type find_CM(Primary Deposit, CRR, Number of rounds) to find the credit multiplier directly from the console.");
-
-        function find_CM(primaryDeposit = +prompt('What is the primary deposit?', '10000'),
-        CRR = +prompt('What is the CRR', '10'),
-        numOfLoops = +prompt('How many times should we loop?', '100')) {
-
-            if (primaryDeposit == undefined || CRR == undefined || numOfLoops == undefined) {
-                alert('You exited... ');
-                return
-            }
-
-            if (isNaN(primaryDeposit) || isNaN(CRR) || isNaN(numOfLoops)) {
-                alert('Put a number Primary Deposit ');
-                factorial()
-                return
-            } else if(isNaN(CRR)){
-                alert('Put a number for CRR ');
-                factorial()
-                return
-            } else if(isNaN(numOfLoops)){
-                alert('Put a number for Number of Loops ');
-                factorial()
-                return
-            }
-
-            if (primaryDeposit < 0) {
-                primaryDeposit *= -1;
-                alert(`You put a negetive number for Primary Deposit so I'll continue with it's positive counterpart... ${primaryDeposit}`)
-            } else if(CRR < 0){
-                CRR *= -1;
-                alert(`You put a negetive number for CRR so I'll continue with it's positive counterpart... ${CRR}`)
-            } else if(numOfLoops < 0){
-                numOfLoops *= -1;
-                alert(`You put a negetive number for Number of Loops so I'll continue with it's positive counterpart... ${numOfLoops}`)
-            }
-
-            let realPD = 0;
-            let realCR = 0;
-            let realSD = 0;
-
-            CRR = CRR / 100;
-
-            let ogPD = primaryDeposit;
-
-            theoAns(primaryDeposit, CRR);
-
-
-            for(i = 1; i <= numOfLoops; i++){
-            realPD += ogPD;
-            newCR = ogPD*CRR;
-            realCR += newCR;
-            newSD = ogPD - newCR;
-            realSD += newSD
-            ogPD = newSD
-            }
-
-            realPD = realPD.toFixed(2)
-            realCR = realCR.toFixed(2);
-            realSD = realSD.toFixed(2);
-
-            diffPD = theoPD - realPD;
-            diffCR = theoCR - realCR;
-            diffSD = theoSD - realSD;
-
-            diffPD = diffPD.toFixed(2);
-            diffCR = diffCR.toFixed(2);
-            diffSD = diffSD.toFixed(2);
-
-            console.log(`
-            Given Information ---->
-            Primary Deposit = ${primaryDeposit}
-            CRR = ${CRR*100}%
-            Number of Loops = ${numOfLoops}
-
-            Theoretical Answer ---->
-            Total Credit Creation = ${theoPD}
-            Total Cash Reserve = ${theoCR}
-            Total Secondary Deposit = ${theoSD}
-            
-            Answer Found ---->
-            Total Credit Creation = ${realPD}
-            Total Cash Reserve = ${realCR}
-            Total Secondary Deposit = ${realSD}
-            
-            Difference --->
-            Total Credit Creation = ${theoPD} - ${realPD} = ${diffPD}
-            Total Cash Reserve = ${theoCR} - ${realCR} = ${diffCR}
-            Total Secondary Deposit = ${theoSD} - ${realSD} = ${diffSD}`);
-
-            alert(`
-            Given Information --->
-            Primary Deposit = Rs.${primaryDeposit}
-            CRR = ${CRR * 100}%
-            Number of Loops = ${numOfLoops}
-
-            Theoretical Answer --->
-            Total Credit Creation = Rs.${theoPD}
-            Total Cash Reserve = Rs.${theoCR}
-            Total Secondary Deposit = Rs.${theoSD}
-            
-            Answer Found --->
-            Total Credit Creation = Rs.${realPD}
-            Total Cash Reserve = Rs.${realCR}
-            Total Secondary Deposit = Rs.${realSD}
-            
-            Difference --->
-            Total Credit Creation = ${theoPD} - ${realPD} = Rs.${diffPD}
-            Total Cash Reserve = ${theoCR} - ${realCR} = Rs.${diffCR}
-            Total Secondary Deposit = ${theoSD} - ${realSD} = Rs.${diffSD}`)
-
-
-            let another = confirm('Find factorial of another number?');
-
-            if(another) find_CM();
-        };
-
-            function theoAns(primaryDeposit,CRR){
-            theoPD = (1/CRR * primaryDeposit);
-            theoCR = theoPD * CRR;
-            theoSD = theoPD - theoCR;
-            };
-    </script>
+    <script src="script.js"></script>
 
 </body>
 

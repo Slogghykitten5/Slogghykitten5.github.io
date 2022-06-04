@@ -1,0 +1,13 @@
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin: 0px;
+    cursor: pointer;
+}
+
+h1 {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
