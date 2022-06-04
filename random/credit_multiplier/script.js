@@ -44,22 +44,40 @@ console.log("Type find_CM(Primary Deposit, CRR, Number of rounds) to find the cr
 
             let ogPD = primaryDeposit;
 
+            clearcontent('tbody');
+
             for(i = 1; i <= numOfLoops; i++){
+
+            let table = document.getElementById('tbody');
+
+            let tr = document.createElement('tr');
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+            let td4 = document.createElement('td');
+
+            table.appendChild(tr).appendChild(td1).innerHTML += i;
+            table.appendChild(tr).appendChild(td2).innerHTML += ogPD.toFixed(2);
             
-            realPD += round(ogPD, 2);
+            realPD += ogPD;
             console.log(realPD)
             
             let newCR = ogPD*CRR;
             realCR += newCR;
-            realCR = round(realCR, 2);
             console.log(realCR);
 
             newSD = +(ogPD - newCR);
             realSD += newSD
-            realSD = round(realSD, 2);
             console.log(realSD);
             
-            ogPD = round(newSD, 2)
+            ogPD = newSD
+            table.appendChild(tr).appendChild(td3).innerHTML += newCR.toFixed(2);
+            table.appendChild(tr).appendChild(td4).innerHTML += newSD.toFixed(2);
+
+            if(realPD.toFixed(2) == theoPD.toFixed(2)){
+                console.log(i);
+                break;
+            } 
 
             }
 
@@ -129,9 +147,8 @@ Total Secondary Deposit = ${theoSD} - ${realSD} = Rs.${diffSD}`)
             theoSD = theoPD - theoCR;
             };
 
-            function round(number, decimalPlaces){
-                const factorOfTen = Math.pow(10, decimalPlaces)
-                return Math.round(number * factorOfTen) / factorOfTen
+            function clearcontent(elementID) {
+                document.getElementById(elementID).innerHTML = "";
             }
 
-            find_CM(20000,10,100)
+            //find_CM(20000,10,100)
