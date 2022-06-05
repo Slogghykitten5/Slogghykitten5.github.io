@@ -45,10 +45,10 @@ console.log("Type find_CM(Primary Deposit, CRR, Number of rounds) to find the cr
             let ogPD = primaryDeposit;
 
             clearcontent('tbody');
+            
+            let table = document.getElementById('tbody');
 
             for(i = 1; i <= numOfLoops; i++){
-
-            let table = document.getElementById('tbody');
 
             let tr = document.createElement('tr');
             let td1 = document.createElement('td');
@@ -92,6 +92,10 @@ console.log("Type find_CM(Primary Deposit, CRR, Number of rounds) to find the cr
             diffPD = +diffPD.toFixed(2);
             diffCR = +diffCR.toFixed(2);
             diffSD = +diffSD.toFixed(2);
+
+            add_ans_tr('Theoretical Answer', theoPD, theoCR, theoSD, 4);
+            add_ans_tr('Real Answer', realPD, realCR, realSD, 4);
+            add_ans_tr('Difference', diffPD, diffCR, diffSD, 4);
 
             console.log(`
 Given Information ---->
@@ -142,13 +146,28 @@ Total Secondary Deposit = ${theoSD} - ${realSD} = Rs.${diffSD}`)
         };
 
             function theoAns(primaryDeposit,CRR){
-            theoPD = (1/CRR * primaryDeposit);
-            theoCR = theoPD * CRR;
-            theoSD = theoPD - theoCR;
+                theoPD = (1/CRR * primaryDeposit);
+                theoCR = theoPD * CRR;
+                theoSD = theoPD - theoCR;
             };
+
+            function add_ans_tr(round, pd, cr, sd, num_of_td){
+                let table = document.getElementById('tbody');
+                let tr = document.createElement('tr');
+                tr.className = 'ans_tr';
+
+                let input = [round, pd, cr, sd]
+
+                for(i = 1; i<= num_of_td; i++){
+                    let td = document.createElement('td');
+                    td.className = 'ans_td'
+                    table.appendChild(tr).appendChild(td).innerHTML += input[i-1];
+                }
+
+            }
 
             function clearcontent(elementID) {
                 document.getElementById(elementID).innerHTML = "";
             }
 
-            //find_CM(20000,10,100)
+            //find_CM(20000,10,10)
