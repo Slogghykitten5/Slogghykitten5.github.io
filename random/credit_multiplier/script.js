@@ -138,11 +138,6 @@ Difference --->
 Total Credit Creation = ${theoPD} - ${realPD} = Rs.${diffPD}
 Total Cash Reserve = ${theoCR} - ${realCR} = Rs.${diffCR}
 Total Secondary Deposit = ${theoSD} - ${realSD} = Rs.${diffSD}`)
-
-
-            let another = confirm('Find Another credit multiplier?');
-
-            if(another) find_CM();
         };
 
             function theoAns(primaryDeposit,CRR){
