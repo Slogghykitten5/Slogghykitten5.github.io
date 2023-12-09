@@ -21,6 +21,17 @@ function daysBetweenDates(date1, date2) {
 document.getElementById('calculate').addEventListener('click', function() {
 
     let startDate = document.getElementById('startDate').value; //gives values in  yyyy-mm-dd
+
+    if(!startDate){
+        let today = new Date();
+
+        let year = today.getFullYear();
+        let month = String(today.getMonth() + 1).padStart(2, '0'); // Adding 1 because months are zero-indexed
+        let day = String(today.getDate()).padStart(2, '0');
+
+        startDate = `${year}-${month}-${day}`; // Output: YYYY-MM-DD (e.g., 2023-07-25 for July 25, 2023)
+    }
+    
     let endDate = document.getElementById('endDate').value; //gives values in  yyyy-mm-dd
     let maturityPrice = parseFloat(document.getElementById('maturityPrice').value);
     let price = parseFloat(document.getElementById('price').value);
